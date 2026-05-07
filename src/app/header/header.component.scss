@@ -10,11 +10,15 @@
 
   .header-container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1800px;
     padding: 0 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 1600px) {
+      padding: 0 140px;
+    }
 
     @media (max-width: 1024px) {
       padding: 0 40px;
