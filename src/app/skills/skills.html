@@ -1,0 +1,39 @@
+<section class="skills" id="skills">
+  <div class="skills-container">
+    <div class="skills-content-top">
+      <div class="header-section">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="description-box">
+          <p>
+            Emphasise that you have used a variety of front-end technologies in your projects.
+            Where have you used these skills: static or dynamic websites,
+            responsive layouts, data visualization interfaces, smooth user experiences?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-content-bottom">
+      <div class="decor-wrapper">
+        <img src="../../assets/skills/CapaCircle.svg" alt="" class="capa-circle">
+        <img src="../../assets/skills/LearningEmoji.svg" alt="" class="learning-emoji">
+      </div>
+
+      <div class="skills-grid">
+        @for (skill of skills; track skill.name) {
+          <div class="skill-item">
+            <div class="skill-icon-wrapper">
+              <img [src]="'../../assets/skills/' + skill.icon" [alt]="skill.name" class="skill-icon">
+            </div>
+            <span class="skill-name">{{ skill.name }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Vertical Scroll Indicator -->
+    <div class="scroll-indicator">
+      <img src="../../assets/skills/ScrollIndicator3.svg" alt="Scroll">
+    </div>
+  </div>
+</section>
