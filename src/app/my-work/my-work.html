@@ -1,0 +1,90 @@
+<section class="my-work" id="my-work">
+  <div class="my-work-container">
+    <div class="section-header">
+      <h2 class="section-title">My Work</h2>
+      <div class="description-box">
+        <p>
+            Explore a selection of my work here -
+            Interact with the projects to see my skills in action.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-card-row">
+      <div class="project-image-area">
+        <div class="image-bg">
+          <div class="circle-decoration">
+            <img src="../../assets/portfolio/circle.svg" alt="" />
+          </div>
+          <img
+            [src]="'../../assets/portfolio/projects/' + project.image"
+            [alt]="project.title"
+            class="project-image"
+          />
+        </div>
+      </div>
+
+      <div class="project-content-column">
+        <div class="project-content">
+          <div class="project-title-row">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <img
+              src="../../assets/portfolio/checkEomji.svg"
+              alt=""
+              class="title-check"
+            />
+          </div>
+
+          <div class="project-tech-list">
+            @for (tech of project.technologies; track tech) {
+              <span class="tech-item">{{ tech }}</span>
+            }
+          </div>
+
+          <p class="project-description">{{ project.description }}</p>
+
+          <div class="project-links">
+            <a
+              [href]="project.githubLink"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+              <span class="btn-arrow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M14.1893 10.315L2.48926 10.31C2.32526 10.31 2.20026 10.259 2.11326 10.159C2.02626 10.058 1.98226 9.926 1.98226 9.762C1.98226 9.599 2.03126 9.469 2.12826 9.372C2.22526 9.275 2.35526 9.227 2.51826 9.227L14.1893 9.221L9.10926 4.141C9.00026 4.032 8.94626 3.905 8.94526 3.759C8.94526 3.612 8.99826 3.485 9.10626 3.378C9.21426 3.27 9.34126 3.215 9.49026 3.214C9.63826 3.213 9.76626 3.266 9.87526 3.375L15.7943 9.294C15.9293 9.429 15.9963 9.587 15.9963 9.768C15.9963 9.95 15.9293 10.108 15.7953 10.242L9.87526 16.162C9.76626 16.27 9.63926 16.325 9.49326 16.325C9.34626 16.326 9.21926 16.272 9.11226 16.165C9.00426 16.057 8.94926 15.929 8.94826 15.78C8.94726 15.632 9.00026 15.504 9.10926 15.396L14.1893 10.315Z" fill="#F8F7E5"/>
+                </svg>
+              </span>
+            </a>
+            <a
+              [href]="project.liveLink"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo
+              <span class="btn-arrow">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M14.1893 10.315L2.48926 10.31C2.32526 10.31 2.20026 10.259 2.11326 10.159C2.02626 10.058 1.98226 9.926 1.98226 9.762C1.98226 9.599 2.03126 9.469 2.12826 9.372C2.22526 9.275 2.35526 9.227 2.51826 9.227L14.1893 9.221L9.10926 4.141C9.00026 4.032 8.94626 3.905 8.94526 3.759C8.94526 3.612 8.99826 3.485 9.10626 3.378C9.21426 3.27 9.34126 3.215 9.49026 3.214C9.63826 3.213 9.76626 3.266 9.87526 3.375L15.7943 9.294C15.9293 9.429 15.9963 9.587 15.9963 9.768C15.9963 9.95 15.9293 10.108 15.7953 10.242L9.87526 16.162C9.76626 16.27 9.63926 16.325 9.49326 16.325C9.34626 16.326 9.21926 16.272 9.11226 16.165C9.00426 16.057 8.94926 15.929 8.94826 15.78C8.94726 15.632 9.00026 15.504 9.10926 15.396L14.1893 10.315Z" fill="#F8F7E5"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-nav">
+          <button class="nav-btn prev-btn"><< Previous project</button>
+          <button class="nav-btn next-btn">Next project >></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <img
+        src="../../assets/portfolio/scrollIndicator4.svg"
+        alt="Scroll"
+      />
+    </div>
+  </div>
+</section>
