@@ -3,11 +3,11 @@
   min-height: 100vh;
   background-color: #F8F7E5; // New background color
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-end; // Aligning content to bottom
   position: relative;
   overflow: hidden;
-  padding-top: 120px;
 
   .about-container {
     width: 100%;
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
+    flex: 1;
 
     @media (min-width: 1600px) {
       padding: 0 140px;
@@ -88,30 +88,16 @@
     background-color: #1D1D1D; 
     padding: 60px;
     margin-left: -100px; // Overlap with image
-    margin-bottom: 80px;
+    margin-bottom: 250px;
     z-index: 2;
     color: #F8F7E5;
     position: relative;
-
-    @media (min-width: 1600px) {
-      padding: 80px;
-      margin-left: -120px;
-      margin-bottom: 100px;
-    }
 
     .about-actions {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 20px;
-    }
-
-    @media (max-width: 1100px) {
-      margin-left: 0;
-      margin-top: -60px;
-      margin-bottom: 40px;
-      padding: 40px;
-      width: 90%;
     }
 
     .section-title {
@@ -200,7 +186,6 @@
 
     img {
       height: 200px;
-      filter: invert(1); // Since background is light, invert or use dark version
     }
   }
 }

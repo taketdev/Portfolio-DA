@@ -1,22 +1,23 @@
 .hero {
   width: 100%;
-  min-height: 100vh; // Fixed header overlays top
-  background-color: #679AAC; // New background color
+  min-height: 100vh;
+  background-color: #679AAC;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end; // Align items to bottom
+  align-items: center;
   position: relative;
   overflow: hidden;
 
   .hero-container {
     width: 100%;
-    max-width: 1800px;
+    max-width: 1920px;
     padding: 0 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end; // Align items to bottom
     position: relative;
-    height: 100%;
+    flex: 1;
 
     @media (min-width: 1600px) {
       padding: 0 140px;
@@ -30,16 +31,16 @@
       padding: 0 20px;
       flex-direction: column;
       text-align: center;
-      align-items: center; // Keep center for mobile
+      align-items: center;
     }
   }
 
   .scroll-indicator {
     position: absolute;
-    right: 40px; // Positioned on the right
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
-    
+
     @media (max-width: 1200px) {
       right: 20px;
     }
@@ -54,9 +55,10 @@
   }
 
   .hero-content {
+    flex: 1;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; // Align content to bottom
+    align-items: center;
     width: 100%;
     gap: 40px;
 
@@ -70,12 +72,7 @@
 
   .hero-text {
     flex: 1;
-    z-index: 2;
-    padding-bottom: 100px; // Give text some space from bottom
-
-    @media (max-width: 768px) {
-      padding-bottom: 40px;
-    }
+    align-self: center;
 
     .hero-title {
       font-size: 80px;
@@ -100,15 +97,17 @@
       .greeting {
         color: #F8F7E5;
         font-weight: 100;
+        font-size: 48px;
       }
 
       .name {
         color: #F8F7E5;
+        font-size: 96px;
       }
     }
 
     .hero-subtitle {
-      font-size: 32px;
+      font-size: 48px;
       font-weight: 100;
       color: #F8F7E5;
       letter-spacing: 2px;
@@ -133,18 +132,18 @@
       border: #FFFFFF solid 2px;
       text-decoration: none;
       font-weight: 600;
-      border-radius:32px;
+      border-radius: 32px;
       transition: background-color 0.2s ease, transform 0.2s ease;
       margin-bottom: 40px;
 
       &:hover {
+        background-color: #FF834F;
         transform: translateY(-2px);
       }
     }
 
     .scroll-down {
       cursor: pointer;
-      transition: transform 0.3s ease;
       display: inline-block;
 
       @media (max-width: 768px) {
@@ -152,13 +151,36 @@
         margin: 0 auto;
       }
 
-      &:hover {
-        transform: translateY(5px);
-      }
-
-      img {
+      .scroll-down-link {
+        display: block;
+        position: relative;
         width: 92px;
         height: 92px;
+
+        .scroll-circle {
+          width: 144px;
+          height: 144px;
+          display: block;
+          animation: rotate-cw 8s linear infinite;
+        }
+
+        .scroll-arrow {
+          position: absolute;
+          top: 77%;
+          left: 77%;
+          transform: translate(-50%, -50%);
+          width: 41px;
+          height: auto;
+          display: block;
+        }
+      }
+
+      &:hover {
+        .scroll-down-link {
+          .scroll-circle {
+            animation-play-state: paused;
+          }
+        }
       }
     }
   }
@@ -167,12 +189,13 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-end; // Align photo to bottom
+    align-items: flex-end;
     position: relative;
-    max-width: 750px; // Increased from 600px
+    max-width: 750px;
+    align-self: flex-end;
 
     @media (min-width: 1600px) {
-      max-width: 900px; // Increased from 750px
+      max-width: 900px;
     }
 
     .hero-circle-bg {
@@ -180,8 +203,8 @@
       width: 100%;
       height: auto;
       z-index: 1;
-      bottom: 0; // Align circle to bottom
-      
+      bottom: 0;
+
       .hero-circle {
         width: 100%;
         height: auto;
@@ -190,17 +213,22 @@
     }
 
     .hero-photo {
-      width: 95%; // Increased from 80%
+      width: 792px;
       height: auto;
       position: relative;
       z-index: 2;
       object-fit: contain;
-      display: block; // Remove whitespace
+      display: block;
     }
   }
 }
 
 @keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-cw {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
