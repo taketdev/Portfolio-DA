@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../services/scroll.service';
 
@@ -13,15 +13,49 @@ export class MyWork implements AfterViewInit {
   private scrollService = inject(ScrollService);
   private platformId = inject(PLATFORM_ID);
 
-  project = {
-    title: 'Join',
-    description:
-      'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
-    image: 'join.png',
-    githubLink: '#',
-    liveLink: '#',
-  };
+  projects = [
+    {
+      title: 'Join',
+      description:
+        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
+      image: 'join.png',
+      githubLink: '#',
+      liveLink: '#',
+    },
+    {
+      title: 'Pokedex',
+      description:
+        'Based on the PokéAPI, a library that provides and displays information about Pokémon. Search and filter through your favorite Pokémon.',
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Rest-API'],
+      image: 'pokedex.png',
+      githubLink: '#',
+      liveLink: '#',
+    },
+    {
+      title: 'WizardGame',
+      description:
+        'A horizontal side-scrolling action game based on an object-oriented approach. Help the wizard survive by fighting monsters.',
+      technologies: ['JavaScript', 'HTML', 'CSS'],
+      image: 'wizardGame.png',
+      githubLink: '#',
+      liveLink: '#',
+    }
+  ];
+
+  currentProjectIndex = signal(0);
+
+  get project() {
+    return this.projects[this.currentProjectIndex()];
+  }
+
+  nextProject() {
+    this.currentProjectIndex.set((this.currentProjectIndex() + 1) % this.projects.length);
+  }
+
+  prevProject() {
+    this.currentProjectIndex.set((this.currentProjectIndex() - 1 + this.projects.length) % this.projects.length);
+  }
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {

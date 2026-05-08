@@ -1,7 +1,7 @@
 .skills {
   width: 100%;
   min-height: 100vh;
-  background-color: #1D1D1D; // Changed to dark background
+  background-color: #1d1d1d; // Changed to dark background
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@
       .section-title {
         font-size: 80px;
         font-weight: 700;
-        color: #F8F7E5; // Light color on dark background
+        color: #f8f7e5; // Light color on dark background
         line-height: 1;
         margin-bottom: 40px;
 
@@ -55,9 +55,9 @@
       }
 
       .description-box {
-        background-color: #679AAC; // Blue box
+        background-color: #679aac; // Blue box
         padding: 40px;
-        color: #F8F7E5;
+        color: #f8f7e5;
         font-size: 18px;
         line-height: 1.6;
         border-radius: 8px;
@@ -99,12 +99,88 @@
       animation: rotate 30s linear infinite;
     }
 
-    .learning-emoji {
+    .emoji-wrapper {
       position: absolute;
       width: 40px;
       height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       z-index: 2;
-      animation: float 4s ease-in-out infinite;
+
+      &:hover {
+        .info-overlay {
+          transform: translateY(0);
+        }
+      }
+
+      .learning-emoji {
+        width: 100%;
+        height: auto;
+        animation: float 4s ease-in-out infinite;
+        cursor: pointer;
+      }
+
+      .info-overlay {
+        position: absolute;
+        bottom: 0;
+        left: calc(100% + 200px);
+        width: 360px;
+        height: 285px;
+        background-color: #f9af42;
+        border: 1px solid #000000;
+        border-radius: 0;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        transform: translateY(800px);
+        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        pointer-events: none;
+
+        .overlay-title {
+          font-size: 24px;
+          font-weight: 700;
+          color: #1d1d1d;
+          text-align: center;
+          margin-bottom: 16px;
+          line-height: 1.2;
+        }
+
+        .overlay-text {
+          font-size: 14px;
+          color: #1d1d1d;
+          text-align: center;
+          margin-bottom: 24px;
+          line-height: 1.5;
+        }
+
+        .skills-icons {
+          display: flex;
+          gap: 48px;
+
+          .skill-icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            img {
+              width: 50px;
+              height: 50px;
+              object-fit: contain;
+            }
+
+            span {
+              font-size: 14px;
+              font-weight: 600;
+              color: #1d1d1d;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -180,7 +256,7 @@
     .skill-name {
       font-size: 16px;
       font-weight: 500;
-      color: #F8F7E5;
+      color: #f8f7e5;
       text-align: center;
 
       @media (min-width: 1600px) {
@@ -194,7 +270,7 @@
     right: 40px;
     top: 50%;
     transform: translateY(-50%);
-    
+
     @media (max-width: 1200px) {
       right: 20px;
     }
@@ -211,11 +287,20 @@
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
