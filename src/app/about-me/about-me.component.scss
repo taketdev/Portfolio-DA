@@ -4,20 +4,19 @@
   background-color: #F8F7E5; // New background color
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end; // Aligning content to bottom
+  align-items: center;
   position: relative;
   overflow: hidden;
 
   .about-container {
     width: 100%;
-    max-width: 1800px;
+    max-width: 1920px;
     padding: 0 100px;
+    flex: 1;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    flex: 1;
 
     @media (min-width: 1600px) {
       padding: 0 140px;
