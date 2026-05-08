@@ -1,0 +1,123 @@
+:host {
+  display: block;
+}
+
+.menu-box {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  width: 208px;
+  height: 222px;
+  background-color: #f8f7e5;
+  border: 1px solid #000000;
+  border-radius: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transform: translateX(calc(100% + 120px));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    right: 40px;
+  }
+
+  @media (max-width: 768px) {
+    right: 20px;
+    top: 80px;
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .menu-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #679AAC;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .close-button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 24px;
+        width: auto;
+      }
+
+      .icon-hover {
+        display: none;
+      }
+
+      &:hover {
+        .icon-default {
+          display: none;
+        }
+        .icon-hover {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .menu-nav {
+    flex: 1;
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .nav-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: url('../../assets/menu/littleCircle.svg');
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) scale(0);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &:hover {
+          &::before {
+            transform: translateY(-50%) scale(1);
+            opacity: 1;
+          }
+
+          a {
+            transform: translateX(24px);
+            color: #ff834f;
+          }
+        }
+
+        a {
+          color: #000000;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 500;
+          display: inline-block;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

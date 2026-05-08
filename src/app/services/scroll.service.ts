@@ -6,4 +6,9 @@ import { Injectable, signal } from '@angular/core';
 export class ScrollService {
   isHeroVisible = signal(true);
   isDarkHeader = signal(false);
+  isMenuOpen = signal(false);
+
+  toggleMenu() {
+    this.isMenuOpen.set(!this.isMenuOpen());
+  }
 }

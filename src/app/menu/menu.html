@@ -1,0 +1,26 @@
+<div class="menu-box" [class.open]="scrollService.isMenuOpen()">
+  <div class="menu-header">
+    <span class="menu-title">Menu</span>
+    <div class="close-button" (click)="closeMenu()">
+      <img src="../../assets/menu/close.svg" alt="Close" class="icon-default">
+      <img src="../../assets/menu/closeHover.svg" alt="Close" class="icon-hover">
+    </div>
+  </div>
+
+  <nav class="menu-nav">
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#about" (click)="closeMenu()">About Me</a>
+      </li>
+      <li class="nav-item">
+        <a href="#skills" (click)="closeMenu()">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a href="#my-work" (click)="closeMenu()">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a href="#contact" (click)="closeMenu()">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>

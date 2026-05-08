@@ -32,7 +32,7 @@
         <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black.svg' : '../../assets/header/EN white.svg'" alt="EN" class="icon-default">
         <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black hover.svg' : '../../assets/header/EN color hover.svg'" alt="EN" class="icon-hover">
       </div>
-      <div class="mobile-menu">
+      <div class="mobile-menu" (click)="scrollService.toggleMenu()">
         <img src="../../assets/header/White Burger.svg" alt="Menu" class="icon-default">
         <img src="../../assets/header/Burger hover.svg" alt="Menu" class="icon-hover">
       </div>
