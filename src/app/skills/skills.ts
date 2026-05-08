@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, inject } from '@angular/core';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-skills',
@@ -6,7 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './skills.html',
   styleUrl: './skills.scss',
 })
-export class Skills {
+export class Skills implements AfterViewInit {
+  private elementRef = inject(ElementRef);
+  private scrollService = inject(ScrollService);
+
   skills = [
     { name: 'Angular', icon: 'Angular.svg' },
     { name: 'TypeScript', icon: 'TS.svg' },
@@ -19,4 +23,20 @@ export class Skills {
     { name: 'Material Design', icon: 'Material Design.svg' },
     { name: 'Scrum', icon: 'Scrum.svg' }
   ];
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.scrollService.isDarkHeader.set(false);
+        }
+      },
+      { 
+        threshold: 0,
+        rootMargin: '-88px 0px -100% 0px'
+      }
+    );
+
+    observer.observe(this.elementRef.nativeElement);
+  }
 }

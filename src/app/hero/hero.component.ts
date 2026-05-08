@@ -12,16 +12,28 @@ export class HeroComponent implements AfterViewInit {
   private scrollService = inject(ScrollService);
 
   ngAfterViewInit() {
-    const observer = new IntersectionObserver(
+    // Observer for logo animation (isHeroVisible)
+    const heroObserver = new IntersectionObserver(
       ([entry]) => {
         this.scrollService.isHeroVisible.set(entry.isIntersecting);
-        if (entry.isIntersecting) {
-          this.scrollService.isDarkHeader.set(false);
-        }
       },
       { threshold: 0.1 }
     );
 
-    observer.observe(this.elementRef.nativeElement);
+    // Observer for header color (isDarkHeader)
+    const themeObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          this.scrollService.isDarkHeader.set(false);
+        }
+      },
+      { 
+        threshold: 0,
+        rootMargin: '-88px 0px -100% 0px'
+      }
+    );
+
+    heroObserver.observe(this.elementRef.nativeElement);
+    themeObserver.observe(this.elementRef.nativeElement);
   }
 }
