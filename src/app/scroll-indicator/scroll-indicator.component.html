@@ -1,0 +1,5 @@
+<div class="scroll-indicator" [class.light-theme]="activeSection() < 2" [class.dark-theme]="activeSection() >= 2 && activeSection() < 4" [class.dark-theme-last]="activeSection() >= 4">
+  <div class="indicator-row" *ngFor="let point of [0,1,2,3,4]; let i = index">
+    <img [src]="getPointSrc(i)" alt="" class="point" [class.active]="isActive(i)">
+  </div>
+</div>

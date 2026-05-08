@@ -7,11 +7,12 @@ import { Skills } from './skills/skills';
 import { MyWork } from './my-work/my-work';
 import { Contact } from './contact/contact';
 import { Footer } from './footer/footer';
+import { ScrollIndicator } from './scroll-indicator/scroll-indicator.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HeroComponent, AboutMeComponent, Skills, MyWork, Contact, Footer],
+  imports: [RouterOutlet, HeaderComponent, HeroComponent, AboutMeComponent, Skills, MyWork, Contact, Footer, ScrollIndicator],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
