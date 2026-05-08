@@ -34,6 +34,17 @@ export class ScrollIndicator implements AfterViewInit, OnDestroy {
     }
   }
 
+  scrollToSection(index: number) {
+    const main = document.querySelector('main');
+    if (!main) return;
+    
+    const clientHeight = main.clientHeight;
+    main.scrollTo({
+      top: index * clientHeight,
+      behavior: 'smooth'
+    });
+  }
+
   detectSection() {
     const main = document.querySelector('main');
     if (!main) return;
@@ -44,7 +55,9 @@ export class ScrollIndicator implements AfterViewInit, OnDestroy {
     const sectionHeight = clientHeight;
     const currentSection = Math.round(scrollTop / sectionHeight);
     
-    this.activeSection.set(currentSection);
+    const clampedSection = Math.min(currentSection, 4);
+    
+    this.activeSection.set(clampedSection);
     this.cdr.detectChanges();
   }
 
