@@ -15,6 +15,9 @@ export class HeroComponent implements AfterViewInit {
     const observer = new IntersectionObserver(
       ([entry]) => {
         this.scrollService.isHeroVisible.set(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          this.scrollService.isDarkHeader.set(false);
+        }
       },
       { threshold: 0.1 }
     );

@@ -1,4 +1,6 @@
-<header class="header" [class.is-scrolled]="!scrollService.isHeroVisible()">
+<header class="header" 
+        [class.is-scrolled]="!scrollService.isHeroVisible()"
+        [class.is-dark]="scrollService.isDarkHeader()">
   <div class="header-container">
     <div class="social-links">
       <a href="#" target="_blank" class="social-link">
@@ -27,8 +29,8 @@
 
     <div class="right-section">
       <div class="lang-switcher">
-        <img src="../../assets/header/EN white.svg" alt="EN" class="icon-default">
-        <img src="../../assets/header/EN Black hover.svg" alt="EN" class="icon-hover">
+        <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black.svg' : '../../assets/header/EN white.svg'" alt="EN" class="icon-default">
+        <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black hover.svg' : '../../assets/header/EN Black hover.svg'" alt="EN" class="icon-hover">
       </div>
       <div class="mobile-menu">
         <img src="../../assets/header/White Burger.svg" alt="Menu" class="icon-default">

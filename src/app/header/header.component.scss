@@ -52,6 +52,17 @@
     }
   }
 
+  &.is-dark {
+    .logo-text {
+      color: #000000 !important;
+    }
+
+    .social-link .icon-default, 
+    .mobile-menu .icon-default {
+      filter: brightness(0);
+    }
+  }
+
   .social-links {
     display: flex;
     gap: 28px;

@@ -5,4 +5,5 @@ import { Injectable, signal } from '@angular/core';
 })
 export class ScrollService {
   isHeroVisible = signal(true);
+  isDarkHeader = signal(false);
 }
