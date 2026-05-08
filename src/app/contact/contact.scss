@@ -1,0 +1,258 @@
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1D1D1D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+
+  .contact-container {
+    width: 100%;
+    max-width: 1800px;
+    padding: 0 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1600px) {
+      padding: 0 140px;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+  }
+
+  .contact-content {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+
+  .contact-info {
+    flex: 1;
+    max-width: 550px;
+
+    @media (min-width: 1600px) {
+      max-width: 650px;
+    }
+
+    @media (max-width: 1100px) {
+      max-width: 100%;
+    }
+
+    .contact-heading {
+      font-size: 80px;
+      font-weight: 700;
+      color: #F9AF42;
+      line-height: 1.1;
+      margin-bottom: 40px;
+
+      @media (min-width: 1600px) {
+        font-size: 100px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 48px;
+      }
+    }
+
+    .contact-solve {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #FF834F;
+
+      @media (min-width: 1600px) {
+        font-size: 22px;
+      }
+    }
+  }
+
+    .contact-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #F8F7E5;
+
+      @media (min-width: 1600px) {
+        font-size: 18px;
+      }
+    }
+
+  .contact-form {
+    flex: 1;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (min-width: 1600px) {
+      max-width: 650px;
+    }
+
+    @media (max-width: 1100px) {
+      max-width: 100%;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 24px;
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
+
+      .form-group {
+        flex: 1;
+      }
+    }
+
+    .form-group {
+      .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: #F8F7E5;
+        margin-bottom: 8px;
+
+        @media (min-width: 1600px) {
+          font-size: 18px;
+        }
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 16px 24px;
+        background: transparent;
+        border: none;
+        border-bottom: 1.5px solid #F9AF42;
+        color: #F8F7E5;
+        font-size: 16px;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.3s ease;
+
+        @media (min-width: 1600px) {
+          font-size: 18px;
+          padding: 20px 24px;
+        }
+
+        &::placeholder {
+          color: #F8F7E5;
+          opacity: 0.6;
+        }
+
+        &:focus {
+          border-bottom-color: #FF834F;
+        }
+
+        &.form-textarea {
+          resize: vertical;
+          min-height: 120px;
+        }
+      }
+    }
+
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      .checkbox-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin-top: 2px;
+        flex-shrink: 0;
+
+        .checkbox-icon {
+          width: 20px;
+          height: 20px;
+          display: block;
+        }
+      }
+
+      .checkbox-label {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #F8F7E5;
+
+        @media (min-width: 1600px) {
+          font-size: 16px;
+        }
+
+        .privacy-link {
+          color: #FF834F;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .form-submit {
+      display: flex;
+      justify-content: flex-end;
+
+      .submit-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 40px;
+        background: transparent;
+        border: 1.5px solid #F8F7E5;
+        border-radius: 32px;
+        color: #F8F7E5;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        @media (min-width: 1600px) {
+          font-size: 22px;
+          padding: 20px 50px;
+        }
+
+        &:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
+        &:not(:disabled):hover {
+          background-color: #F8F7E5;
+          color: #1D1D1D;
+
+          .submit-arrow img {
+            filter: invert(1);
+          }
+        }
+
+        .submit-arrow {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 20px;
+            height: 32px;
+            transition: filter 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}

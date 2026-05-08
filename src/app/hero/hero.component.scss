@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  min-height: calc(100vh - 112px); // Subtracting header height
+  min-height: 100vh; // Fixed header overlays top
   background-color: #679AAC; // New background color
   display: flex;
   justify-content: center;

@@ -32,6 +32,24 @@
     }
   }
 
+  .about-heading {
+    width: 100%;
+    font-size: 80px;
+    font-weight: 700;
+    color: #1D1D1D;
+    line-height: 1;
+    text-align: right;
+    margin-bottom: 40px;
+
+    @media (min-width: 1600px) {
+      font-size: 100px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
+  }
+
   .about-content {
     display: flex;
     justify-content: center;

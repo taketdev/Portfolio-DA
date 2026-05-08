@@ -1,0 +1,82 @@
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h2 class="contact-heading">Let's build<br />something Cool<br />together!</h2>
+        <p class="contact-solve">
+          Got a Problem to solve?
+        </p>
+        <p class="contact-text">
+          rage people to contact you and describe what role you are interested in.
+          Show that you will add value to their projects through your work.
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">What's your name?</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name goes here"
+              class="form-input"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">What's your email?</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="youremail@mail.com"
+              class="form-input"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">How can I help you?</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Hello Max, I am interested in..."
+            class="form-input form-textarea"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-checkbox">
+          <button
+            type="button"
+            class="checkbox-btn"
+            (click)="toggleCheck()"
+            [attr.aria-checked]="checked"
+          >
+            <img
+              [src]="checked ? '../../assets/contactAndFooter/checkbox Checked.svg' : '../../assets/contactAndFooter/checkbox.svg'"
+              alt=""
+              class="checkbox-icon"
+            />
+          </button>
+          <span class="checkbox-label">
+            I've read the
+            <a href="#" class="privacy-link">privacy policy</a>
+            and agree to the processing of my data.
+          </span>
+        </div>
+
+        <div class="form-submit">
+          <button
+            type="submit"
+            class="submit-btn"
+            [disabled]="!checked">
+            Drop a Line
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
