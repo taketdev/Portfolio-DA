@@ -1,4 +1,5 @@
-import { Component, ElementRef, AfterViewInit, inject } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../services/scroll.service';
 
 @Component({
@@ -10,20 +11,23 @@ import { ScrollService } from '../services/scroll.service';
 export class Footer implements AfterViewInit {
   private elementRef = inject(ElementRef);
   private scrollService = inject(ScrollService);
+  private platformId = inject(PLATFORM_ID);
 
   ngAfterViewInit() {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          this.scrollService.isDarkHeader.set(false);
+    if (isPlatformBrowser(this.platformId)) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            this.scrollService.isDarkHeader.set(false);
+          }
+        },
+        { 
+          threshold: 0,
+          rootMargin: '-88px 0px -100% 0px'
         }
-      },
-      { 
-        threshold: 0,
-        rootMargin: '-88px 0px -100% 0px'
-      }
-    );
+      );
 
-    observer.observe(this.elementRef.nativeElement);
+      observer.observe(this.elementRef.nativeElement);
+    }
   }
 }
