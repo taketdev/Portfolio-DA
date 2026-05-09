@@ -100,7 +100,7 @@
 
         &.form-textarea {
           resize: vertical;
-          min-height: 120px;
+          max-height: 51px;
         }
       }
     }
@@ -226,6 +226,7 @@
       font-weight: 500;
       color: #F8F7E5;
       flex-shrink: 0;
+      padding-bottom: 52px;
     }
 
     .footer-links {
@@ -234,6 +235,7 @@
       gap: 32px;
       align-items: center;
       justify-content: flex-end;
+      padding-bottom: 52px;
 
       .footer-link {
         font-size: 16px;
