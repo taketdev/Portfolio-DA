@@ -1,6 +1,7 @@
 .legal-notice {
   min-height: 100vh;
   background-color: #1D1D1D;
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -8,7 +9,7 @@
 
   .legal-container {
     width: 100%;
-    max-width: 900px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 80px 100px;
     flex: 1;
@@ -16,6 +17,7 @@
     .legal-title {
       font-size: 80px;
       font-weight: 700;
+      font-family: 'Eczar', serif !important;
       color: #F8F7E5;
       margin-bottom: 60px;
       line-height: 1.1;
@@ -42,19 +44,6 @@
       }
     }
 
-    .back-link {
-      display: inline-block;
-      margin-top: 40px;
-      font-size: 16px;
-      font-weight: 600;
-      color: #FF834F;
-      text-decoration: none;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 0.6;
-      }
-    }
   }
 
   .legal-bottom {

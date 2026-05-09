@@ -16,7 +16,8 @@ export class LegalNoticeComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      this.scrollService.isDarkHeader.set(true);
+      this.scrollService.isDarkHeader.set(false);
+      this.scrollService.isHeroVisible.set(false);
     }
   }
 }
