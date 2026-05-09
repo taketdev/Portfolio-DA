@@ -1,4 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Eczar';
+  src: url('assets/fonts/eczar/Eczar-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eczar';
+  src: url('assets/fonts/eczar/Eczar-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eczar';
+  src: url('assets/fonts/eczar/Eczar-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eczar';
+  src: url('assets/fonts/eczar/Eczar-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eczar';
+  src: url('assets/fonts/eczar/Eczar-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('assets/fonts/quicksand/Quicksand_Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('assets/fonts/quicksand/Quicksand_Light_Oblique.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('assets/fonts/quicksand/Quicksand_Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('assets/fonts/quicksand/Quicksand_Book_Oblique.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('assets/fonts/quicksand/Quicksand_Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('assets/fonts/quicksand/Quicksand_Bold_Oblique.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('assets/fonts/quicksand/Quicksand_Dash.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
