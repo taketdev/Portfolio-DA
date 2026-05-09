@@ -12,46 +12,12 @@
   .hero-container {
     width: 100%;
     max-width: 1920px;
-    padding: 0 100px;
+    padding: 0 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     flex: 1;
-
-    @media (min-width: 1600px) {
-      padding: 0 140px;
-    }
-
-    @media (max-width: 1024px) {
-      padding: 0 40px;
-    }
-
-    @media (max-width: 768px) {
-      padding: 0 20px;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-    }
-  }
-
-  .scroll-indicator {
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @media (max-width: 1200px) {
-      right: 20px;
-    }
-
-    @media (max-width: 900px) {
-      display: none;
-    }
-
-    img {
-      height: 200px;
-    }
   }
 
   .hero-content {
@@ -61,18 +27,12 @@
     align-items: center;
     width: 100%;
     gap: 40px;
-
-    @media (max-width: 768px) {
-      flex-direction: column-reverse;
-      gap: 60px;
-      padding-top: 40px;
-      align-items: center;
-    }
   }
 
   .hero-text {
     flex: 1;
     align-self: center;
+    margin-left: 50px;
 
     .hero-title {
       font-size: 80px;
@@ -81,18 +41,6 @@
       margin-bottom: 24px;
       display: flex;
       flex-direction: column;
-
-      @media (min-width: 1600px) {
-        font-size: 100px;
-      }
-
-      @media (max-width: 1024px) {
-        font-size: 60px;
-      }
-
-      @media (max-width: 480px) {
-        font-size: 40px;
-      }
 
       .greeting {
         color: #F8F7E5;
@@ -112,15 +60,6 @@
       color: #F8F7E5;
       letter-spacing: 2px;
       margin-bottom: 48px;
-
-      @media (min-width: 1600px) {
-        font-size: 40px;
-      }
-
-      @media (max-width: 768px) {
-        font-size: 18px;
-        margin-bottom: 32px;
-      }
     }
 
     .cta-button {
@@ -145,11 +84,6 @@
     .scroll-down {
       cursor: pointer;
       display: inline-block;
-
-      @media (max-width: 768px) {
-        display: block;
-        margin: 0 auto;
-      }
 
       .scroll-down-link {
         display: block;
@@ -193,10 +127,6 @@
     position: relative;
     max-width: 750px;
     align-self: flex-end;
-
-    @media (min-width: 1600px) {
-      max-width: 900px;
-    }
 
     .hero-circle-bg {
       position: absolute;

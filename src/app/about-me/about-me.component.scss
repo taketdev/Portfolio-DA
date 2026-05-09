@@ -11,24 +11,12 @@
   .about-container {
     width: 100%;
     max-width: 1920px;
-    padding: 0 100px;
+    padding: 0 190px;
     flex: 1;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    @media (min-width: 1600px) {
-      padding: 0 140px;
-    }
-
-    @media (max-width: 1024px) {
-      padding: 0 40px;
-    }
-
-    @media (max-width: 768px) {
-      padding: 0 20px;
-    }
+    justify-content: end;
   }
 
   .about-heading {
@@ -38,15 +26,7 @@
     color: #1d1d1d;
     line-height: 1;
     text-align: right;
-    margin-bottom: 40px;
-
-    @media (min-width: 1600px) {
-      font-size: 100px;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 48px;
-    }
+    margin-bottom: -80px;
   }
 
   .about-content {
@@ -55,11 +35,6 @@
     align-items: flex-end;
     width: 100%;
     position: relative;
-
-    @media (max-width: 1100px) {
-      flex-direction: column;
-      align-items: center;
-    }
   }
 
   .about-image-container {
@@ -71,14 +46,8 @@
     z-index: 1;
 
     .about-photo {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      display: block;
-
-      @media (min-width: 1600px) {
-        max-width: 650px;
-      }
+      width: auto;
+      height: 1100px;
     }
   }
 
@@ -87,7 +56,7 @@
     background-color: #1d1d1d;
     padding: 60px;
     margin-left: -100px;
-    margin-bottom: 250px;
+    margin-bottom: 450px;
     z-index: 2;
     color: #f8f7e5;
     position: relative;
@@ -181,14 +150,6 @@
         font-size: 48px;
         font-weight: 700;
         color: #f8f7e5;
-
-        @media (min-width: 1600px) {
-          font-size: 64px;
-        }
-
-        @media (max-width: 480px) {
-          font-size: 32px;
-        }
       }
     }
 
@@ -196,10 +157,6 @@
       font-size: 18px;
       line-height: 1.6;
       margin-bottom: 32px;
-
-      @media (min-width: 1600px) {
-        font-size: 22px;
-      }
 
       p {
         margin-bottom: 16px;
@@ -217,11 +174,6 @@
       font-weight: 600;
       transition: all 0.3s ease;
 
-      @media (min-width: 1600px) {
-        padding: 20px 50px;
-        font-size: 20px;
-      }
-
       &:hover {
         background-color: #e67647;
         transform: translateY(-3px);
@@ -236,14 +188,6 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
-
-    @media (max-width: 1200px) {
-      right: 20px;
-    }
-
-    @media (max-width: 1100px) {
-      display: none;
-    }
 
     img {
       height: 200px;
