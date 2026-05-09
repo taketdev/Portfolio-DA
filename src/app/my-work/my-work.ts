@@ -23,6 +23,7 @@ export class MyWork implements AfterViewInit {
       githubLink: '#',
       liveLink: '#',
       emoji: 'staticsEmoji.svg',
+      emojiDescription: 'Worked collaboratively in a team environment, contributing to the frontend implementation, responsive layouts, and interactive user features throughout the development process.',
     },
     {
       title: 'Pokedex',
@@ -33,6 +34,7 @@ export class MyWork implements AfterViewInit {
       githubLink: '#',
       liveLink: '#',
       emoji: 'pokeEmoji.svg',
+      emojiDescription: 'Handled the integration and presentation of dynamic Pokémon data, while contributing to the user interface and overall application structure.',
     },
     {
       title: 'WizardGame',
@@ -43,6 +45,7 @@ export class MyWork implements AfterViewInit {
       githubLink: '#',
       liveLink: '#',
       emoji: 'chatEmoji.svg',
+      emojiDescription: 'Focused on implementing gameplay elements, animations, and improving the overall player experience during the development of the game.',
     }
   ];
 

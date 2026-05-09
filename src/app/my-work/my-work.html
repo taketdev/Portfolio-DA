@@ -31,11 +31,16 @@
           <div class="project-fade-content" [class.fade-out]="isTransitioning()">
             <div class="project-title-row">
               <h3 class="project-title">{{ project.title }}</h3>
-              <img
-                [src]="'../../assets/portfolio/' + project.emoji"
-                alt=""
-                class="title-check"
-              />
+              <div class="emoji-wrapper">
+                <img
+                  [src]="'../../assets/portfolio/' + project.emoji"
+                  alt=""
+                  class="title-check"
+                />
+                <div class="info-overlay">
+                  <span class="overlay-text">{{ project.emojiDescription }}</span>
+                </div>
+              </div>
             </div>
 
             <div class="project-tech-list">

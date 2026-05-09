@@ -123,25 +123,63 @@
             opacity: 0;
           }
 
-          .project-title-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 24px;
+            .project-title-row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 24px;
 
-            .project-title {
-              font-size: 48px;
-              font-weight: 700;
-              color: #F8F7E5;
-            }
+              .project-title {
+                font-size: 48px;
+                font-weight: 700;
+                color: #F8F7E5;
+              }
 
-            .title-check {
-              width: 40px;
-              height: 40px;
-              flex-shrink: 0;
-              animation: float 2s ease-in-out infinite;
+              .emoji-wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                  .info-overlay {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+
+                .title-check {
+                  width: 40px;
+                  height: 40px;
+                  flex-shrink: 0;
+                  animation: float 2s ease-in-out infinite;
+                  cursor: pointer;
+                }
+
+                  .info-overlay {
+                  position: absolute;
+                  bottom: calc(100% + 8px);
+                  right: 0;
+                  left: auto;
+                  width: 500px;
+                  transform: translateY(10px);
+                  background-color: #679AAC;
+                  border: 1px solid #F8F7E5;
+                  border-radius: 4px;
+                  padding: 16px;
+                  text-align: left;
+                  opacity: 0;
+                  transition: opacity 0.3s ease, transform 0.3s ease;
+                  pointer-events: none;
+                  z-index: 10;
+
+                  .overlay-text {
+                    font-size: 16px;
+                    font-weight: 200;
+                    color: #F8F7E5;
+                  }
+                }
+              }
             }
-          }
 
           .project-tech-list {
             display: flex;
