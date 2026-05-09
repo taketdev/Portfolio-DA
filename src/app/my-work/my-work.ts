@@ -22,6 +22,7 @@ export class MyWork implements AfterViewInit {
       image: 'join.png',
       githubLink: '#',
       liveLink: '#',
+      emoji: 'staticsEmoji.svg',
     },
     {
       title: 'Pokedex',
@@ -31,6 +32,7 @@ export class MyWork implements AfterViewInit {
       image: 'pokedex.png',
       githubLink: '#',
       liveLink: '#',
+      emoji: 'pokeEmoji.svg',
     },
     {
       title: 'WizardGame',
@@ -40,21 +42,33 @@ export class MyWork implements AfterViewInit {
       image: 'wizardGame.png',
       githubLink: '#',
       liveLink: '#',
+      emoji: 'chatEmoji.svg',
     }
   ];
 
   currentProjectIndex = signal(0);
+  isTransitioning = signal(false);
 
   get project() {
     return this.projects[this.currentProjectIndex()];
   }
 
   nextProject() {
-    this.currentProjectIndex.set((this.currentProjectIndex() + 1) % this.projects.length);
+    if (this.isTransitioning()) return;
+    this.isTransitioning.set(true);
+    setTimeout(() => {
+      this.currentProjectIndex.update(i => (i + 1) % this.projects.length);
+      setTimeout(() => this.isTransitioning.set(false), 50);
+    }, 200);
   }
 
   prevProject() {
-    this.currentProjectIndex.set((this.currentProjectIndex() - 1 + this.projects.length) % this.projects.length);
+    if (this.isTransitioning()) return;
+    this.isTransitioning.set(true);
+    setTimeout(() => {
+      this.currentProjectIndex.update(i => (i - 1 + this.projects.length) % this.projects.length);
+      setTimeout(() => this.isTransitioning.set(false), 50);
+    }, 200);
   }
 
   ngAfterViewInit() {

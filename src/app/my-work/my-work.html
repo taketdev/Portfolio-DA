@@ -16,31 +16,35 @@
           <div class="circle-decoration">
             <img src="../../assets/portfolio/circle.svg" alt="" />
           </div>
-          <img
-            [src]="'../../assets/portfolio/projects/' + project.image"
-            [alt]="project.title"
-            class="project-image"
-          />
+          <div class="project-image-fade" [class.fade-out]="isTransitioning()">
+            <img
+              [src]="'../../assets/portfolio/projects/' + project.image"
+              [alt]="project.title"
+              class="project-image"
+            />
+          </div>
         </div>
       </div>
 
       <div class="project-content-column">
         <div class="project-content">
-          <div class="project-title-row">
-            <h3 class="project-title">{{ project.title }}</h3>
-            <img
-              src="../../assets/portfolio/checkEomji.svg"
-              alt=""
-              class="title-check"
-            />
-          </div>
+          <div class="project-fade-content" [class.fade-out]="isTransitioning()">
+            <div class="project-title-row">
+              <h3 class="project-title">{{ project.title }}</h3>
+              <img
+                [src]="'../../assets/portfolio/' + project.emoji"
+                alt=""
+                class="title-check"
+              />
+            </div>
 
-          <div class="project-tech-list">
-            @for (tech of project.technologies; track tech) {
-              <span class="tech-item">{{ tech }}</span>}
-          </div>
+            <div class="project-tech-list">
+              @for (tech of project.technologies; track tech) {
+                <span class="tech-item">{{ tech }}</span>}
+            </div>
 
-          <p class="project-description">{{ project.description }}</p>
+            <p class="project-description">{{ project.description }}</p>
+          </div>
 
           <div class="project-links">
             <a
