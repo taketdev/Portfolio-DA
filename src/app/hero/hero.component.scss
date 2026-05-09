@@ -45,12 +45,12 @@
       .greeting {
         color: #F8F7E5;
         font-weight: 100;
-        font-size: 48px;
+        font-size: 56px;
       }
 
       .name {
         color: #F8F7E5;
-        font-size: 96px;
+        font-size: 116px;
       }
     }
 
@@ -59,7 +59,7 @@
       font-weight: 100;
       color: #F8F7E5;
       letter-spacing: 2px;
-      margin-bottom: 48px;
+      margin-bottom: 46px;
     }
 
     .cta-button {
@@ -84,6 +84,7 @@
     .scroll-down {
       cursor: pointer;
       display: inline-block;
+      margin-top: 252px;
 
       .scroll-down-link {
         display: block;
@@ -125,7 +126,6 @@
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    max-width: 750px;
     align-self: flex-end;
 
     .hero-circle-bg {
@@ -143,8 +143,8 @@
     }
 
     .hero-photo {
-      width: 792px;
-      height: auto;
+      width: auto;
+      height: 1000px;
       position: relative;
       z-index: 2;
       object-fit: contain;
