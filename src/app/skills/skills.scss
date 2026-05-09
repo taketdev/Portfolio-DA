@@ -11,24 +11,12 @@
   .skills-container {
     width: 100%;
     max-width: 1920px;
-    padding: 120px 100px;
+    padding: 160px 140px;
     flex: 1;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    @media (min-width: 1600px) {
-      padding: 120px 140px;
-    }
-
-    @media (max-width: 1024px) {
-      padding: 120px 40px;
-    }
-
-    @media (max-width: 768px) {
-      padding: 60px 20px;
-    }
   }
 
   .skills-content-top {
@@ -36,22 +24,14 @@
     margin-bottom: 60px;
 
     .header-section {
-      max-width: 800px;
+      max-width: 902px;
 
       .section-title {
-        font-size: 80px;
+        font-size: 100px;
         font-weight: 700;
         color: #f8f7e5; // Light color on dark background
         line-height: 1;
         margin-bottom: 40px;
-
-        @media (min-width: 1600px) {
-          font-size: 100px;
-        }
-
-        @media (max-width: 768px) {
-          font-size: 48px;
-        }
       }
 
       .description-box {
@@ -60,12 +40,8 @@
         color: #f8f7e5;
         font-size: 18px;
         line-height: 1.6;
-        border-radius: 8px;
-
-        @media (min-width: 1600px) {
-          font-size: 22px;
-          padding: 60px;
-        }
+        border-radius: 4px;
+        max-width: 700px;
       }
     }
   }
@@ -76,12 +52,6 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-top: auto;
-
-    @media (max-width: 1100px) {
-      flex-direction: column;
-      align-items: center;
-      gap: 80px;
-    }
   }
 
   .decor-wrapper {
@@ -91,17 +61,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -50px;
 
     .capa-circle {
-      width: 100%;
-      height: auto;
+      width: 150px;
+      height: 150px;
       animation: rotate 30s linear infinite;
     }
 
     .emoji-wrapper {
       position: absolute;
-      width: 40px;
+      width: 50px;
       height: auto;
       display: flex;
       justify-content: center;
@@ -117,7 +86,7 @@
       .learning-emoji {
         width: 100%;
         height: auto;
-        animation: float 4s ease-in-out infinite;
+        animation: float 2s ease-in-out infinite;
         cursor: pointer;
       }
 
@@ -187,40 +156,24 @@
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 64px;
     justify-content: flex-end;
-    max-width: 700px;
-    padding-bottom: 40px;
-
-    @media (min-width: 1600px) {
-      max-width: 900px;
-      gap: 50px;
-    }
-
-    @media (max-width: 1100px) {
-      justify-content: center;
-      max-width: 100%;
-    }
+    max-width: 800px;
   }
 
   .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    width: 100px; // Smaller skills
+    gap: 34px;
+    width: 100px;
     transition: transform 0.3s ease;
 
-    @media (min-width: 1600px) {
-      width: 130px;
-      gap: 16px;
-    }
-
     &:hover {
-      transform: translateY(-8px);
+      transform: translateY(-4px);
 
       .skill-icon {
-        transform: scale(1.3); // Icon gets larger
+        transform: scale(1.2); // Icon gets larger
       }
     }
 
@@ -234,34 +187,19 @@
       border-radius: 16px;
       transition: all 0.3s ease;
 
-      @media (min-width: 1600px) {
-        width: 110px;
-        height: 110px;
-      }
-
       .skill-icon {
-        width: 45px;
-        height: 45px;
+        width: 96px;
+        height: 123px;
         object-fit: contain;
         transition: transform 0.3s ease;
-        // Filter removed as requested
-
-        @media (min-width: 1600px) {
-          width: 65px;
-          height: 65px;
-        }
       }
     }
 
     .skill-name {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       color: #f8f7e5;
       text-align: center;
-
-      @media (min-width: 1600px) {
-        font-size: 20px;
-      }
     }
   }
 
@@ -270,14 +208,6 @@
     right: 40px;
     top: 50%;
     transform: translateY(-50%);
-
-    @media (max-width: 1200px) {
-      right: 20px;
-    }
-
-    @media (max-width: 1100px) {
-      display: none;
-    }
 
     img {
       height: 200px;
