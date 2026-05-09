@@ -16,18 +16,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
-    @media (min-width: 1600px) {
-      padding: 120px 140px;
-    }
-
-    @media (max-width: 1024px) {
-      padding: 120px 40px;
-    }
-
-    @media (max-width: 768px) {
-      padding: 60px 20px;
-    }
   }
 
   .contact-content {
@@ -35,25 +23,11 @@
     gap: 80px;
     align-items: flex-start;
     flex: 1;
-
-    @media (max-width: 1100px) {
-      flex-direction: column;
-      gap: 60px;
-      flex: none;
-    }
   }
 
   .contact-info {
     flex: 1;
     max-width: 800px;
-
-    @media (min-width: 1600px) {
-      max-width: 800px;
-    }
-
-    @media (max-width: 1100px) {
-      max-width: 100%;
-    }
 
     .contact-heading {
       font-size: 80px;
@@ -61,24 +35,12 @@
       color: #F9AF42;
       line-height: 1.1;
       margin-bottom: 40px;
-
-      @media (min-width: 1600px) {
-        font-size: 100px;
-      }
-
-      @media (max-width: 768px) {
-        font-size: 48px;
-      }
     }
 
     .contact-solve {
       font-size: 18px;
       line-height: 1.6;
       color: #FF834F;
-
-      @media (min-width: 1600px) {
-        font-size: 22px;
-      }
     }
   }
 
@@ -86,10 +48,6 @@
       font-size: 16px;
       line-height: 1.6;
       color: #F8F7E5;
-
-      @media (min-width: 1600px) {
-        font-size: 18px;
-      }
     }
 
   .contact-form {
@@ -101,22 +59,9 @@
     align-self: flex-end;
     margin-bottom: 152px;
 
-    @media (min-width: 1600px) {
-      max-width: 800px;
-    }
-
-    @media (max-width: 1100px) {
-      max-width: 100%;
-      align-self: stretch;
-    }
-
     .form-row {
       display: flex;
       gap: 24px;
-
-      @media (max-width: 600px) {
-        flex-direction: column;
-      }
 
       .form-group {
         flex: 1;
@@ -130,10 +75,6 @@
         font-weight: 600;
         color: #F8F7E5;
         margin-bottom: 8px;
-
-        @media (min-width: 1600px) {
-          font-size: 18px;
-        }
       }
 
       .form-input {
@@ -147,11 +88,6 @@
         font-family: inherit;
         outline: none;
         transition: border-color 0.3s ease;
-
-        @media (min-width: 1600px) {
-          font-size: 18px;
-          padding: 20px 24px;
-        }
 
         &::placeholder {
           color: #F8F7E5;
@@ -194,10 +130,6 @@
         line-height: 1.5;
         color: #F8F7E5;
 
-        @media (min-width: 1600px) {
-          font-size: 16px;
-        }
-
         .privacy-link {
           color: #FF834F;
           text-decoration: none;
@@ -227,11 +159,6 @@
         font-family: inherit;
         cursor: pointer;
         transition: all 0.3s ease;
-
-        @media (min-width: 1600px) {
-          font-size: 22px;
-          padding: 20px 50px;
-        }
 
         &:disabled {
           opacity: 0.3;
@@ -266,14 +193,6 @@
     right: 40px;
     top: 50%;
     transform: translateY(-50%);
-
-    @media (max-width: 1200px) {
-      right: 20px;
-    }
-
-    @media (max-width: 1100px) {
-      display: none;
-    }
 
     img {
       height: 168px;
