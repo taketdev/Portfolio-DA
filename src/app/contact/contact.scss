@@ -191,14 +191,16 @@
   .contact-bottom {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 1920px;
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
-    padding: 0 100px 20px;
+    padding: 0 100px;
 
     .contact-circles {
+      flex: 1;
       display: flex;
       align-items: flex-end;
 
@@ -207,28 +209,31 @@
         display: block;
       }
 
-      .blue-circle {
+      .orange-circle {
         z-index: 1;
-        animation: spin-cw 8s linear infinite;
+        animation: spin-ccw 8s linear infinite;
       }
 
-      .orange-circle {
+      .blue-circle {
         margin-left: -65px;
         z-index: 2;
-        animation: spin-ccw 8s linear infinite;
+        animation: spin-cw 8s linear infinite;
       }
     }
 
-    .contact-footer {
+    .footer-copyright {
+      font-size: 18px;
+      font-weight: 500;
+      color: #F8F7E5;
+      flex-shrink: 0;
+    }
+
+    .footer-links {
+      flex: 1;
       display: flex;
       gap: 32px;
       align-items: center;
-
-      .footer-copyright {
-        font-size: 18px;
-        font-weight: 500;
-        color: #F8F7E5;
-      }
+      justify-content: flex-end;
 
       .footer-link {
         font-size: 16px;
