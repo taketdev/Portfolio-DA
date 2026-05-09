@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: #f8f7e5;
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +24,7 @@
     width: 100%;
     font-size: 100px;
     font-weight: 700;
+    font-family: 'Eczar', serif !important;
     color: #1d1d1d;
     line-height: 1;
     text-align: right;
@@ -157,6 +159,7 @@
       font-size: 18px;
       line-height: 1.6;
       margin-bottom: 32px;
+      font-weight: 400;
 
       p {
         margin-bottom: 16px;
@@ -164,6 +167,8 @@
     }
 
     .talk-button {
+      font-size: 18px;
+      font-weight: 700;
       display: inline-block;
       padding: 16px 40px;
       border-color: #ffffff;

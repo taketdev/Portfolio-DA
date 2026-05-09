@@ -1,7 +1,8 @@
 .skills {
   width: 100%;
   min-height: 100vh;
-  background-color: #1d1d1d; // Changed to dark background
+  background-color: #1d1d1d;
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +29,7 @@
 
       .section-title {
         font-size: 100px;
+        font-family: 'Eczar', serif !important;
         font-weight: 700;
         color: #f8f7e5; // Light color on dark background
         line-height: 1;
@@ -37,6 +39,7 @@
       .description-box {
         background-color: #679aac; // Blue box
         padding: 40px;
+        font-weight: 400;
         color: #f8f7e5;
         font-size: 18px;
         line-height: 1.6;
@@ -97,8 +100,8 @@
         width: 360px;
         height: 285px;
         background-color: #f9af42;
-        border: 1px solid #000000;
-        border-radius: 0;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
         padding: 32px;
         display: flex;
         flex-direction: column;
@@ -112,15 +115,16 @@
         .overlay-title {
           font-size: 24px;
           font-weight: 700;
-          color: #1d1d1d;
+          color: #F8F7E5;
           text-align: center;
           margin-bottom: 16px;
           line-height: 1.2;
         }
 
         .overlay-text {
-          font-size: 14px;
-          color: #1d1d1d;
+          font-size: 16px;
+          color: #F8F7E5;
+          font-weight: 400;
           text-align: center;
           margin-bottom: 24px;
           line-height: 1.5;
@@ -143,9 +147,9 @@
             }
 
             span {
-              font-size: 14px;
+              font-size: 16px;
               font-weight: 600;
-              color: #1d1d1d;
+              color: #F8F7E5;
             }
           }
         }

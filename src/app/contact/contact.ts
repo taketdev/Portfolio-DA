@@ -1,10 +1,11 @@
 import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

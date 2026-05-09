@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ScrollIndicator implements AfterViewInit, OnDestroy {
   activeSection = signal(0);
-  private scrollListener: any;
+  private pollTimer: any;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -20,18 +20,14 @@ export class ScrollIndicator implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     if (!isPlatformBrowser(this.platformId)) return;
-    
     setTimeout(() => {
       this.detectSection();
-      this.scrollListener = () => this.detectSection();
-      document.querySelector('main')?.addEventListener('scroll', this.scrollListener);
+      this.pollTimer = setInterval(() => this.detectSection(), 150);
     }, 300);
   }
 
   ngOnDestroy() {
-    if (this.scrollListener) {
-      document.querySelector('main')?.removeEventListener('scroll', this.scrollListener);
-    }
+    if (this.pollTimer) clearInterval(this.pollTimer);
   }
 
   scrollToSection(index: number) {
