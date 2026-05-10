@@ -31,13 +31,13 @@
         font-size: 100px;
         font-family: 'Eczar', serif !important;
         font-weight: 700;
-        color: #f8f7e5; // Light color on dark background
+        color: #f8f7e5;
         line-height: 1;
         margin-bottom: 40px;
       }
 
       .description-box {
-        background-color: #679aac; // Blue box
+        background-color: #679aac;
         padding: 40px;
         font-weight: 400;
         color: #f8f7e5;
@@ -177,12 +177,12 @@
       transform: translateY(-4px);
 
       .skill-icon {
-        transform: scale(1.2); // Icon gets larger
+        transform: scale(1.2);
       }
     }
 
     .skill-icon-wrapper {
-      width: 80px; // Smaller icons
+      width: 80px;
       height: 80px;
       display: flex;
       justify-content: center;
@@ -215,7 +215,7 @@
 
     img {
       height: 200px;
-      filter: invert(0); // White scrollbar for dark background
+      filter: invert(0);
     }
   }
 }
