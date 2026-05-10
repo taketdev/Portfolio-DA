@@ -15,7 +15,6 @@
   }
 
   .arrow-btn {
-    margin-bottom: 120px;
     position: absolute;
     bottom: calc(100% + 28px);
     left: 50%;
@@ -27,16 +26,28 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    animation: arrowPump 2s ease-in-out infinite;
 
-    &:hover {
-      transform: translateX(-50%) scale(1.15);
-    }
-
-    img {
+    .arrow-img {
+      display: block;
       width: 30px;
       height: 48px;
+      animation: clipArrow 2s ease-in-out infinite;
     }
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes arrowPump {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+  }
+
+  @keyframes clipArrow {
+    0%, 100% { clip-path: inset(0 0 28px 0); }
+    50% { clip-path: inset(0 0 18px 0); }
   }
 
   .scroll-indicator {
