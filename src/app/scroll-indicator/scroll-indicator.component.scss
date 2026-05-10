@@ -1,12 +1,9 @@
-.scroll-indicator {
+.scroll-indicator-wrapper {
   position: fixed;
   right: 40px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
   pointer-events: auto;
 
   @media (max-width: 1200px) {
@@ -17,24 +14,55 @@
     display: none;
   }
 
-  .indicator-row {
+  .arrow-btn {
+    margin-bottom: 120px;
+    position: absolute;
+    bottom: calc(100% + 28px);
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateX(-50%) scale(1.15);
+    }
+
+    img {
+      width: 30px;
+      height: 48px;
+    }
   }
 
-  .point {
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.2);
+  .scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    .indicator-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    
-    &.active {
-      transform: scale(1.2);
+
+    .point {
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.2);
+      }
+      
+      &.active {
+        transform: scale(1.2);
+      }
     }
   }
 }
