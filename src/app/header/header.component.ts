@@ -18,7 +18,7 @@ export class HeaderComponent {
 
   socialLinks = {
     github: 'https://github.com/taketdev',
-    linkedin: 'https://linkedin.com/in/DEIN_LINKEDIN',
+    linkedin: 'https://www.linkedin.com/in/max-leyh-a52671362/',
     email: 'mailto:maxleyh17@proton.me'
   };
 
