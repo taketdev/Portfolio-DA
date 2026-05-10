@@ -1,11 +1,14 @@
 import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { ScrollService } from '../services/scroll.service';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
@@ -13,11 +16,55 @@ export class Contact implements AfterViewInit {
   private elementRef = inject(ElementRef);
   private scrollService = inject(ScrollService);
   private platformId = inject(PLATFORM_ID);
+  private http = inject(HttpClient);
 
   checked = false;
+  name = '';
+  email = '';
+  message = '';
+  submitting = false;
+  success = false;
+  errorMessage: string | null = null;
 
   toggleCheck() {
     this.checked = !this.checked;
+  }
+
+  async onSubmit() {
+    this.submitting = true;
+    this.success = false;
+    this.errorMessage = null;
+
+    if (!this.checked) {
+      this.errorMessage = 'Please accept the privacy policy.';
+      this.submitting = false;
+      return;
+    }
+
+    try {
+      // Der Pfad ist relativ zum Projekt-Root über den Proxy
+      const res: any = await lastValueFrom(
+        this.http.post('/api/src/app/contact/contactFormMail.php', {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+        })
+      );
+
+      if (res.success) {
+        this.success = true;
+        this.name = '';
+        this.email = '';
+        this.message = '';
+        this.checked = false;
+      } else {
+        this.errorMessage = res.error || 'Something went wrong.';
+      }
+    } catch (err: any) {
+      this.errorMessage = err.error?.error || 'Server not reachable.';
+    } finally {
+      this.submitting = false;
+    }
   }
 
   ngAfterViewInit() {

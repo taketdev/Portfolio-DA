@@ -12,7 +12,7 @@
         </p>
       </div>
 
-      <form class="contact-form">
+      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="name">What's your name?</label>
@@ -22,6 +22,8 @@
               name="name"
               placeholder="Your name goes here"
               class="form-input"
+              [(ngModel)]="name"
+              required
             />
           </div>
 
@@ -33,6 +35,8 @@
               name="email"
               placeholder="youremail@mail.com"
               class="form-input"
+              [(ngModel)]="email"
+              required
             />
           </div>
         </div>
@@ -45,6 +49,8 @@
             placeholder="Hello Max, I am interested in..."
             class="form-input form-textarea"
             rows="4"
+            [(ngModel)]="message"
+            required
           ></textarea>
         </div>
 
@@ -68,12 +74,23 @@
           </span>
         </div>
 
+        @if (success) {
+          <div class="form-status form-success">
+            Message sent successfully! I'll get back to you soon.
+          </div>
+        }
+        @if (errorMessage) {
+          <div class="form-status form-error">
+            {{ errorMessage }}
+          </div>
+        }
+
         <div class="form-submit">
           <button
             type="submit"
             class="submit-btn"
-            [disabled]="!checked">
-            Drop a Line
+            [disabled]="!checked || submitting">
+            {{ submitting ? 'Sending...' : 'Drop a Line' }}
           </button>
         </div>
       </form>
