@@ -6,14 +6,6 @@
   z-index: 100;
   pointer-events: auto;
 
-  @media (max-width: 1200px) {
-    right: 20px;
-  }
-
-  @media (max-width: 900px) {
-    display: none;
-  }
-
   .arrow-btn {
     position: absolute;
     bottom: calc(100% + 28px);
@@ -36,18 +28,36 @@
     }
 
     &:hover {
-      animation-play-state: paused;
+      filter: invert(59%) sepia(87%) saturate(2000%) hue-rotate(-10deg) brightness(150%) contrast(105%);
     }
   }
 
   @keyframes arrowPump {
     0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-62px); }
+    50% { transform: translateX(-50%) translateY(-46px); }
   }
 
   @keyframes clipArrow {
     0%, 100% { clip-path: inset(0 0 28px 0); }
     50% { clip-path: inset(0 0 18px 0); }
+  }
+
+  .arrow-underscore {
+    position: absolute;
+    bottom: calc(100% + 60px - 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: #FF834F;
+    border-radius: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .arrow-btn:hover + .arrow-underscore {
+    opacity: 1;
   }
 
   .scroll-indicator {
