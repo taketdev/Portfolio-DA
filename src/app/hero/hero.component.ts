@@ -15,6 +15,7 @@ export class HeroComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
+      this.scrollService.currentPage.set('home');
       // Observer for logo animation (isHeroVisible)
       const heroObserver = new IntersectionObserver(
         ([entry]) => {

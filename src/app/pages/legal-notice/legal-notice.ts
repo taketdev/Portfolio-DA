@@ -18,6 +18,7 @@ export class LegalNoticeComponent implements AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       this.scrollService.isDarkHeader.set(false);
       this.scrollService.isHeroVisible.set(false);
+      this.scrollService.currentPage.set('legal-notice');
     }
   }
 }
