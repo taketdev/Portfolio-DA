@@ -26,13 +26,13 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    animation: arrowPump 2s ease-in-out infinite;
+    animation: arrowPump 3.5s ease-in-out infinite;
 
     .arrow-img {
       display: block;
       width: 30px;
       height: 48px;
-      animation: clipArrow 2s ease-in-out infinite;
+      animation: clipArrow 3.5s ease-in-out infinite;
     }
 
     &:hover {
@@ -42,7 +42,7 @@
 
   @keyframes arrowPump {
     0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-8px); }
+    50% { transform: translateX(-50%) translateY(-62px); }
   }
 
   @keyframes clipArrow {
