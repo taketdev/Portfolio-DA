@@ -30,8 +30,16 @@
 
     <div class="right-section">
       <div class="lang-switcher">
-        <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black.svg' : '../../assets/header/EN white.svg'" alt="EN" class="icon-default">
-        <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black hover.svg' : '../../assets/header/EN color hover.svg'" alt="EN" class="icon-hover">
+        <div class="lang-toggle" (click)="toggleLanguage()">
+          <div class="lang-option" *ngIf="translationService.currentLang() === 'en'">
+            <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black.svg' : '../../assets/header/EN white.svg'" alt="EN" class="icon-default">
+            <img [src]="scrollService.isDarkHeader() ? '../../assets/header/EN Black hover.svg' : '../../assets/header/EN color hover.svg'" alt="EN" class="icon-hover">
+          </div>
+          <div class="lang-option" *ngIf="translationService.currentLang() === 'de'">
+            <img [src]="scrollService.isDarkHeader() ? '../../assets/header/DE Black.svg' : '../../assets/header/DE white.svg'" alt="DE" class="icon-default">
+            <img [src]="scrollService.isDarkHeader() ? '../../assets/header/DE Black hover.svg' : '../../assets/header/DE hover.svg'" alt="DE" class="icon-hover">
+          </div>
+        </div>
       </div>
       <div class="mobile-menu" (click)="scrollService.toggleMenu()">
         <img src="../../assets/header/White Burger.svg" alt="Menu" class="icon-default">

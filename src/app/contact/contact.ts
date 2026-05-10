@@ -4,11 +4,13 @@ import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ScrollService } from '../services/scroll.service';
+import { TranslatePipe } from '../pipes/translate.pipe';
 import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
-  imports: [RouterLink, FormsModule],
+  standalone: true,
+  imports: [RouterLink, FormsModule, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

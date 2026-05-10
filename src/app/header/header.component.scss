@@ -18,7 +18,7 @@
   .header-container {
     width: 100%;
     max-width: 1800px;
-    padding: 0 100px;
+    padding: 0 140px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +69,7 @@
       position: relative;
 
       img {
-        height: 24px;
+        height: 32px;
         width: auto;
         transition: transform 0.2s ease;
         display: block;
@@ -123,26 +123,38 @@
     .lang-switcher {
       display: flex;
       align-items: center;
-      position: relative;
+      color: #F8F7E5;
+      font-weight: 500;
 
-      img {
-        height: 40px;
-        width: 40px;
+      .lang-toggle {
+        display: flex;
+        align-items: center;
         cursor: pointer;
-        display: block;
       }
 
-      .icon-hover {
-        display: none;
-      }
+      .lang-option {
+        display: flex;
+        align-items: center;
+        transition: opacity 0.2s ease;
 
-      &:hover {
-        .icon-default {
-          display: none;
+        img {
+          height: 32px;
+          width: 32px;
+          display: block;
         }
 
         .icon-hover {
-          display: block;
+          display: none;
+        }
+
+        &:hover {
+          .icon-default {
+            display: none;
+          }
+
+          .icon-hover {
+            display: block;
+          }
         }
       }
     }
@@ -155,7 +167,7 @@
       z-index: 10;
 
       img {
-        height: 20px;
+        height: 32px;
         width: auto;
         display: block;
       }

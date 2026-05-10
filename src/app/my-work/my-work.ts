@@ -1,10 +1,12 @@
 import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../services/scroll.service';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 @Component({
   selector: 'app-my-work',
-  imports: [],
+  standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './my-work.html',
   styleUrl: './my-work.scss',
 })
@@ -16,36 +18,30 @@ export class MyWork implements AfterViewInit {
   projects = [
     {
       title: 'Join',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      key: 'join',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       image: 'join.png',
       githubLink: 'https://github.com/nm-97/Join-',
       liveLink: 'https://taketdev.github.io/Join/',
       emoji: 'staticsEmoji.svg',
-      emojiDescription: 'Worked collaboratively in a team environment, contributing to the frontend implementation, responsive layouts, and interactive user features throughout the development process.',
     },
     {
       title: 'Pokedex',
-      description:
-        'Based on the PokéAPI, a library that provides and displays information about Pokémon. Search and filter through your favorite Pokémon.',
+      key: 'pokedex',
       technologies: ['JavaScript', 'HTML', 'CSS', 'Rest-API'],
       image: 'pokedex.png',
       githubLink: 'https://github.com/taketdev/Pokedex',
       liveLink: 'https://taketdev.github.io/Pokedex/',
       emoji: 'pokeEmoji.svg',
-      emojiDescription: 'Handled the integration and presentation of dynamic Pokémon data, while contributing to the user interface and overall application structure.',
     },
     {
       title: 'WizardGame',
-      description:
-        'A horizontal side-scrolling action game based on an object-oriented approach. Help the wizard survive by fighting monsters.',
+      key: 'wizard',
       technologies: ['JavaScript', 'HTML', 'CSS'],
       image: 'wizardGame.png',
       githubLink: 'https://github.com/taketdev/2D-Game',
       liveLink: 'https://taketdev.github.io/2D-Game/',
       emoji: 'chatEmoji.svg',
-      emojiDescription: 'Focused on implementing gameplay elements, animations, and improving the overall player experience during the development of the game.',
     }
   ];
 

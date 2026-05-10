@@ -1,6 +1,6 @@
 <div class="menu-box" [class.open]="scrollService.isMenuOpen()">
   <div class="menu-header">
-    <span class="menu-title">Menu</span>
+    <span class="menu-title">{{ 'header.menu' | translate }}</span>
     <div class="close-button" (click)="closeMenu()">
       <img src="../../assets/menu/close.svg" alt="Close" class="icon-default">
       <img src="../../assets/menu/closeHover.svg" alt="Close" class="icon-hover">
@@ -10,16 +10,16 @@
   <nav class="menu-nav">
     <ul class="nav-list">
       <li class="nav-item">
-        <a (click)="scrollToSection(1)">About Me</a>
+        <a (click)="scrollToSection(1)">{{ 'header.about' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a (click)="scrollToSection(2)">Skills</a>
+        <a (click)="scrollToSection(2)">{{ 'header.skills' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a (click)="scrollToSection(3)">Portfolio</a>
+        <a (click)="scrollToSection(3)">{{ 'header.projects' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a (click)="scrollToSection(4)">Contact</a>
+        <a (click)="scrollToSection(4)">{{ 'header.contact' | translate }}</a>
       </li>
     </ul>
   </nav>

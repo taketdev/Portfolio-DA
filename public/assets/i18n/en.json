@@ -1,0 +1,92 @@
+{
+  "header": {
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Portfolio",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "hero": {
+    "greeting": "Hello there! I'm",
+    "subtitle": "FRONTEND DEVELOPER",
+    "cta": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hey there, I'm Max. I am a passionate Frontend Developer who loves creating beautiful and functional user interfaces. I enjoy solving complex problems and constantly learning new technologies to stay up-to-date with the latest industry trends.",
+    "connect": "Let's connect and create something amazing together!",
+    "talk": "Let's talk",
+    "overlayTitle": "More about me",
+    "teamplayer": "Teamplayer",
+    "learner": "Continuous Learner",
+    "creative": "Creative Thinker",
+    "based": "Based in Crailsheim",
+    "remote": "Open to work remote",
+    "relocate": "Open to relocate"
+  },
+  "skills": {
+    "title": "Core Competencies",
+    "description": "I have experience with a variety of frontend technologies, focusing on creating responsive layouts, smooth user experiences, and efficient code.",
+    "missingTitle": "Don't see the skill you are looking for?",
+    "missingText": "Feel free to contact me. I look forward to expanding on my previous knowledge. Also I have a special interest in learning:"
+  },
+  "work": {
+    "title": "My Work",
+    "description": "Explore a selection of my work here - Interact with the projects to see my skills in action.",
+    "github": "GitHub",
+    "live": "Live Demo",
+    "prev": "Previous project",
+    "next": "Next project",
+    "projects": {
+      "join": {
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "emojiDescription": "Worked collaboratively in a team environment, contributing to the frontend implementation, responsive layouts, and interactive user features throughout the development process."
+      },
+      "pokedex": {
+        "description": "Based on the PokéAPI, a library that provides and displays information about Pokémon. Search and filter through your favorite Pokémon.",
+        "emojiDescription": "Handled the integration and presentation of dynamic Pokémon data, while contributing to the user interface and overall application structure."
+      },
+      "wizard": {
+        "description": "A horizontal side-scrolling action game based on an object-oriented approach. Help the wizard survive by fighting monsters.",
+        "emojiDescription": "Focused on implementing gameplay elements, animations, and improving the overall player experience during the development of the game."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Let's build\nsomething Cool\ntogether!",
+    "solve": "Got a Problem to solve?",
+    "text": "Feel free to contact me and describe what role you are interested in. I will add value to your projects through my work.",
+    "nameLabel": "What's your name?",
+    "namePlaceholder": "Your name goes here",
+    "emailLabel": "What's your email?",
+    "emailPlaceholder": "youremail@mail.com",
+    "messageLabel": "How can I help you?",
+    "messagePlaceholder": "Hello Max, I am interested in...",
+    "privacy1": "I've read the",
+    "privacy2": "privacy policy",
+    "privacy3": "and agree to the processing of my data.",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "sending": "Sending...",
+    "submit": "Drop a Line",
+    "impressum": "Impressum"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "imprint": "Imprint",
+    "board": "Exploring the Board",
+    "terms": "Acceptance of terms",
+    "scope": "Scope and ownership of the product",
+    "proprietary": "Proprietary rights",
+    "use": "Use of the product",
+    "disclaimer": "Disclaimer of warranties and limitation of liability",
+    "indemnity": "Indemnity",
+    "address": "Max Leyh<br />Roter Buck Nr. 54<br />74564 Crailsheim<br />Germany",
+    "termsText": "By accessing and using <span class=\"legal-bold\">Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
+    "scopeText1": "<span class=\"legal-bold\">Portfolio</span> has been developed as part of a student group project in a web development bootcamp at the <span class=\"legal-bold\">Developer Akademie GmbH</span>. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+    "scopeText2": "The design of <span class=\"legal-bold\">Portfolio</span> is owned by the <span class=\"legal-bold\">Developer Akademie GmbH</span>. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    "proprietaryText": "Aside from the design owned by <span class=\"legal-bold\">Developer Akademie GmbH</span>, we, the listed students, retain all proprietary rights in <span class=\"legal-bold\">Portfolio</span>, including any associated copyrighted material, trademarks, and other proprietary information.",
+    "useText": "<span class=\"legal-bold\">Portfolio</span> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of <span class=\"legal-bold\">Portfolio</span> for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of <span class=\"legal-bold\">Portfolio</span>.",
+    "disclaimerText": "<span class=\"legal-bold\">Portfolio</span> is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the <span class=\"legal-bold\">Developer Akademie</span>, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of <span class=\"legal-bold\">Portfolio</span>.",
+    "indemnityText": "You agree to indemnify, defend and hold harmless us, the listed students, the <span class=\"legal-bold\">Developer Akademie</span>, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of <span class=\"legal-bold\">Portfolio</span> and/or your breach of this Legal Notice.<br /><br />For any questions or notices, please contact us at [Contact Email].<br /><br />Date: July 26, 2025"
+  }
+}

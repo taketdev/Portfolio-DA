@@ -1,6 +1,6 @@
 <section class="about-me" id="about">
   <div class="about-container">
-    <h2 class="about-heading">About Me</h2>
+    <h2 class="about-heading">{{ 'about.title' | translate }}</h2>
 
     <div class="about-content">
       <div class="about-image-container">
@@ -11,45 +11,43 @@
         
         <div class="about-description">
           <p>
-            Hey there, I'm Hanna. Write some information about yourself that is IT related. Why are you passionate about coding? 
-            What is your source of inspiration for improving your programming skills?  
-            Do you learn from each challenge as you search for the most efficient or elegant solution?
+            {{ 'about.description' | translate }}
           </p>
           <p>
-            Let's connect and create something amazing together!
+            {{ 'about.connect' | translate }}
           </p>
         </div>
 
         <div class="about-actions">
-          <a href="#contact" class="talk-button">Let's talk</a>
+          <a href="#contact" class="talk-button">{{ 'about.talk' | translate }}</a>
           <div class="emoji-wrapper">
             <img src="../../assets/aboutMe/sshEmoji.svg" alt="" class="about-emoji">
             <div class="info-overlay">
-              <h3 class="overlay-title">More about me</h3>
+              <h3 class="overlay-title">{{ 'about.overlayTitle' | translate }}</h3>
               <ul class="overlay-list">
                 <li class="overlay-item">
                   <img src="../../assets/aboutMe/overlay/checkCircle.svg" alt="">
-                  <span>Teamplayer</span>
+                  <span>{{ 'about.teamplayer' | translate }}</span>
                 </li>
                 <li class="overlay-item">
                   <img src="../../assets/aboutMe/overlay/checkCircle.svg" alt="">
-                  <span>Continuasly Learner</span>
+                  <span>{{ 'about.learner' | translate }}</span>
                 </li>
                 <li class="overlay-item">
                   <img src="../../assets/aboutMe/overlay/checkCircle.svg" alt="">
-                  <span>Creative Thinker</span>
+                  <span>{{ 'about.creative' | translate }}</span>
                 </li>
                 <li class="overlay-item">
                   <img src="../../assets/aboutMe/overlay/checkCircle.svg" alt="">
-                  <span>Based in Crailsheim</span>
+                  <span>{{ 'about.based' | translate }}</span>
                 </li>
                 <li class="overlay-item">
                   <img src="../../assets/aboutMe/overlay/checkCircle.svg" alt="">
-                  <span>Open to work remote</span>
+                  <span>{{ 'about.remote' | translate }}</span>
                 </li>
                 <li class="overlay-item">
                   <img src="../../assets/aboutMe/overlay/checkCircle.svg" alt="">
-                  <span>Open to relocate</span>
+                  <span>{{ 'about.relocate' | translate }}</span>
                 </li>
               </ul>
             </div>

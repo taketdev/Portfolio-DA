@@ -1,0 +1,92 @@
+{
+  "header": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Portfolio",
+    "contact": "Kontakt",
+    "menu": "Menü"
+  },
+  "hero": {
+    "greeting": "Hallo! Ich bin",
+    "subtitle": "FRONTEND ENTWICKLER",
+    "cta": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über mich",
+    "description": "Hallo, ich bin Max. Ich bin ein leidenschaftlicher Frontend-Entwickler, der es liebt, schöne und funktionale Benutzeroberflächen zu erstellen. Es macht mir Spaß, komplexe Probleme zu lösen und ständig neue Technologien zu erlernen, um auf dem neuesten Stand der Branche zu bleiben.",
+    "connect": "Lass uns vernetzen und gemeinsam etwas Großartiges erschaffen!",
+    "talk": "Lass uns reden",
+    "overlayTitle": "Mehr über mich",
+    "teamplayer": "Teamplayer",
+    "learner": "Ständiges Lernen",
+    "creative": "Kreativer Denker",
+    "based": "Ansässig in Crailsheim",
+    "remote": "Bereit für Remote-Arbeit",
+    "relocate": "Bereit für Umzug"
+  },
+  "skills": {
+    "title": "Kernkompetenzen",
+    "description": "Ich habe Erfahrung mit einer Vielzahl von Frontend-Technologien, wobei ich mich auf die Erstellung responsiver Layouts, reibungslose Benutzererlebnisse und effizienten Code konzentriere.",
+    "missingTitle": "Fehlt die Fähigkeit, die Sie suchen?",
+    "missingText": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern. Außerdem habe ich ein besonderes Interesse daran zu lernen:"
+  },
+  "work": {
+    "title": "Meine Arbeit",
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "github": "GitHub",
+    "live": "Live Demo",
+    "prev": "Vorheriges Projekt",
+    "next": "Nächstes Projekt",
+    "projects": {
+      "join": {
+        "description": "Auf dem Kanban-System basierender Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "emojiDescription": "Zusammenarbeit im Team, Beitrag zur Frontend-Implementierung, responsiven Layouts und interaktiven Benutzerfunktionen während des gesamten Entwicklungsprozesses."
+      },
+      "pokedex": {
+        "description": "Basierend auf der PokéAPI, einer Bibliothek, die Informationen über Pokémon bereitstellt und anzeigt. Suchen und filtern Sie nach Ihren Lieblings-Pokémon.",
+        "emojiDescription": "Integration und Präsentation dynamischer Pokémon-Daten, Beitrag zur Benutzeroberfläche und zur gesamten Anwendungsstruktur."
+      },
+      "wizard": {
+        "description": "Ein horizontales Side-Scrolling-Actionspiel, das auf einem objektorientierten Ansatz basiert. Hilf dem Zauberer zu überleben, indem du Monster bekämpfst.",
+        "emojiDescription": "Konzentration auf die Implementierung von Gameplay-Elementen, Animationen und die Verbesserung des gesamten Spielerlebnisses während der Entwicklung des Spiels."
+      }
+    }
+  },
+  "contact": {
+    "heading": "Lass uns\ngemeinsam etwas\nCooles bauen!",
+    "solve": "Haben Sie ein Problem zu lösen?",
+    "text": "Kontaktieren Sie mich gerne und beschreiben Sie, an welcher Rolle Sie interessiert sind. Ich werde Ihren Projekten durch meine Arbeit einen Mehrwert verleihen.",
+    "nameLabel": "Wie ist Ihr Name?",
+    "namePlaceholder": "Ihr Name hier",
+    "emailLabel": "Wie ist Ihre E-Mail?",
+    "emailPlaceholder": "ihremail@mail.com",
+    "messageLabel": "Wie kann ich Ihnen helfen?",
+    "messagePlaceholder": "Hallo Max, ich interessiere mich für...",
+    "privacy1": "Ich habe die",
+    "privacy2": "Datenschutzerklärung",
+    "privacy3": "gelesen und bin mit der Verarbeitung meiner Daten einverstanden.",
+    "success": "Nachricht erfolgreich gesendet! Ich melde mich bald bei Ihnen.",
+    "sending": "Wird gesendet...",
+    "submit": "Schreiben Sie mir",
+    "impressum": "Impressum"
+  },
+  "legal": {
+    "title": "Impressum",
+    "imprint": "Impressum",
+    "board": "Vorstand",
+    "terms": "Nutzungsbedingungen",
+    "scope": "Umfang und Eigentum am Produkt",
+    "proprietary": "Eigentumsrechte",
+    "use": "Nutzung des Produkts",
+    "disclaimer": "Haftungsausschluss und Haftungsbeschränkung",
+    "indemnity": "Entschädigung",
+    "address": "Max Leyh<br />Roter Buck Nr. 54<br />74564 Crailsheim<br />Deutschland",
+    "termsText": "Durch den Zugriff auf und die Nutzung von <span class=\"legal-bold\">Portfolio</span> (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, Leitfäden oder Änderungen daran, die Ihnen von Zeit zu Zeit vorgelegt werden können, an und erklären sich damit einverstanden. Wir, die aufgeführten Studenten, können die Bedingungen von Zeit zu Zeit ohne vorherige Ankündigung aktualisieren oder ändern.",
+    "scopeText1": "<span class=\"legal-bold\">Portfolio</span> wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp bei der <span class=\"legal-bold\">Developer Akademie GmbH</span> entwickelt. Es dient Ausbildungszwecken und ist nicht für eine umfassende persönliche oder geschäftliche Nutzung bestimmt. Daher können wir keine ständige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsaspekte in Bezug auf dieses Produkt garantieren.",
+    "scopeText2": "Das Design von <span class=\"legal-bold\">Portfolio</span> ist Eigentum der <span class=\"legal-bold\">Developer Akademie GmbH</span>. Die unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Replikation des Designs ist strengstens untersagt.",
+    "proprietaryText": "Abgesehen von dem Design, das Eigentum der <span class=\"legal-bold\">Developer Akademie GmbH</span> ist, behalten wir, die aufgeführten Studenten, alle Eigentumsrechte an <span class=\"legal-bold\">Portfolio</span>, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und anderen geschützten Informationen.",
+    "useText": "<span class=\"legal-bold\">Portfolio</span> darf nur für rechtmäßige Zwecke in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften verwendet werden. Jegliche Nutzung von <span class=\"legal-bold\">Portfolio</span> für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung einer anderen Person ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <span class=\"legal-bold\">Portfolio</span>.",
+    "disclaimerText": "<span class=\"legal-bold\">Portfolio</span> wird \"wie besehen\" ohne jegliche Gewährleistung, weder ausdrücklich noch stillschweigend, bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studenten, oder die <span class=\"legal-bold\">Developer Akademie</span> für direkte, indirekte, zufällige, besondere, Folgeschäden oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden aus entgangenem Gewinn, Firmenwert, Nutzung, Daten oder anderen immateriellen Verlusten, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus oder im Zusammenhang mit der Nutzung oder Leistung von <span class=\"legal-bold\">Portfolio</span> ergeben.",
+    "indemnityText": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studenten, die <span class=\"legal-bold\">Developer Akademie</span> und unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Agenten und Mitarbeiter schadlos zu halten von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten), die sich aus Ihrer Nutzung von <span class=\"legal-bold\">Portfolio</span> und/oder Ihrem Verstoß gegen dieses Impressum ergeben.<br /><br />Für Fragen oder Mitteilungen kontaktieren Sie uns bitte unter [Kontakt-E-Mail].<br /><br />Datum: 26. Juli 2025"
+  }
+}

@@ -2,25 +2,24 @@
   <div class="contact-container">
     <div class="contact-content">
       <div class="contact-info">
-        <h2 class="contact-heading">Let's build<br />something Cool<br />together!</h2>
+        <h2 class="contact-heading">{{ 'contact.heading' | translate }}</h2>
         <p class="contact-solve">
-          Got a Problem to solve?
+          {{ 'contact.solve' | translate }}
         </p>
         <p class="contact-text">
-          rage people to contact you and describe what role you are interested in.
-          Show that you will add value to their projects through your work.
+          {{ 'contact.text' | translate }}
         </p>
       </div>
 
       <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="name">What's your name?</label>
+            <label class="form-label" for="name">{{ 'contact.nameLabel' | translate }}</label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Your name goes here"
+              [placeholder]="'contact.namePlaceholder' | translate"
               class="form-input"
               [(ngModel)]="name"
               required
@@ -28,12 +27,12 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="email">What's your email?</label>
+            <label class="form-label" for="email">{{ 'contact.emailLabel' | translate }}</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="youremail@mail.com"
+              [placeholder]="'contact.emailPlaceholder' | translate"
               class="form-input"
               [(ngModel)]="email"
               required
@@ -42,11 +41,11 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="message">How can I help you?</label>
+          <label class="form-label" for="message">{{ 'contact.messageLabel' | translate }}</label>
           <textarea
             id="message"
             name="message"
-            placeholder="Hello Max, I am interested in..."
+            [placeholder]="'contact.messagePlaceholder' | translate"
             class="form-input form-textarea"
             rows="4"
             [(ngModel)]="message"
@@ -68,15 +67,15 @@
             />
           </button>
           <span class="checkbox-label">
-            I've read the
-            <a href="#" class="privacy-link">privacy policy</a>
-            and agree to the processing of my data.
+            {{ 'contact.privacy1' | translate }}
+            <a href="#" class="privacy-link">{{ 'contact.privacy2' | translate }}</a>
+            {{ 'contact.privacy3' | translate }}
           </span>
         </div>
 
         @if (success) {
           <div class="form-status form-success">
-            Message sent successfully! I'll get back to you soon.
+            {{ 'contact.success' | translate }}
           </div>
         }
         @if (errorMessage) {
@@ -90,7 +89,7 @@
             type="submit"
             class="submit-btn"
             [disabled]="!checked || submitting">
-            {{ submitting ? 'Sending...' : 'Drop a Line' }}
+            {{ submitting ? ('contact.sending' | translate) : ('contact.submit' | translate) }}
           </button>
         </div>
       </form>
@@ -104,7 +103,7 @@
     </div>
     <span class="footer-copyright">&copy; max leyh 2026</span>
     <div class="footer-links">
-      <a [routerLink]="'/legal-notice'" class="footer-link">Impressum</a>
+      <a [routerLink]="'/legal-notice'" class="footer-link">{{ 'contact.impressum' | translate }}</a>
       <a href="#" class="footer-link">LinkedIn</a>
       <a href="#" class="footer-link">GitHub</a>
     </div>
