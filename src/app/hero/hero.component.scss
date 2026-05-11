@@ -26,7 +26,7 @@
     }
 
     @media (max-width: 430px) {
-      padding: 0px;
+      padding: 0px 25px 0 25px;
   }
 
   .hero-content {
@@ -79,7 +79,7 @@
     @media (max-width: 430px) {
       margin-top: 300px;
       z-index: 10;
-      max-height: 250px;
+      max-height: 100px;
     }
 
     .hero-title {
@@ -95,8 +95,16 @@
         font-weight: 100;
         font-size: 56px;
 
+      @media (max-width: 1559px) {
+          font-size: 44px;
+        }  
+
         @media (max-width: 1280px) {
           font-size: 44px;
+        }
+
+        @media (max-width: 430px) {
+          font-size: 32px;
         }
       }
 
@@ -105,8 +113,16 @@
         color: #F8F7E5;
         font-size: 112px;
 
+        @media (max-width: 1559px) {
+          font-size: 80px;
+        }
+
         @media (max-width: 1280px) {
           font-size: 80px;
+        }
+
+        @media (max-width: 430px) {
+          font-size: 64px;
         }
       }
     }
@@ -117,6 +133,10 @@
       color: #F8F7E5;
       letter-spacing: 2px;
       margin-bottom: 46px;
+
+      @media (max-width: 1559px) {
+        font-size: 32px;
+      }
 
       @media (max-width: 1280px) {
         font-size: 32px;
@@ -147,7 +167,7 @@
       display: inline-block;
       margin-top: 252px;
 
-      @media (max-width: 1545px) {
+      @media (max-width: 1728px) {
         margin-top: 100px;
       }
 
@@ -164,12 +184,21 @@
       @media (max-width: 768px) {
         position: relative;
         top: 400px;
+        right: 50px;
         z-index: 3;
       }
 
       @media (max-width: 430px) {
         position: relative;
-        top: 245px;
+        top: 200px;
+        left: 25px;
+        z-index: 3;
+      }
+
+      @media (max-width: 375px) {
+        position: relative;
+        top: 150px;
+        left: 25px;
         z-index: 3;
       }
 
@@ -184,6 +213,11 @@
           height: 144px;
           display: block;
           animation: rotate-cw 8s linear infinite;
+
+          @media (max-width: 430px) {
+            width: 90px;
+            height: 90px;
+          }
         }
 
         .scroll-arrow {
@@ -194,6 +228,12 @@
           width: 41px;
           height: auto;
           display: block;
+
+          @media (max-width: 430px) {
+            width: 30px;
+            top: 32%;
+            left: 32%;
+          }
         }
       }
 
@@ -246,8 +286,12 @@
       object-fit: contain;
       display: block;
 
+      @media (max-width: 1559px) {
+        height: 800px;
+      }
+
       @media (max-width: 1545px) {
-        height: 900px;
+        height: 600px;
       }
 
       @media (max-width: 1445px) {
@@ -265,8 +309,12 @@
       @media (max-width: 430px) {
          height: 400px;
     }
+        
+      @media (max-width: 375px) {
+          height: 360px;
+    }
   }
-  }
+}
 
 @keyframes rotate {
   from { transform: rotate(0deg); }

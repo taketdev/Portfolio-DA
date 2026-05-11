@@ -1,7 +1,6 @@
 .about-me {
   width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
   background-color: #f8f7e5;
   font-family: 'Quicksand', sans-serif;
   display: flex;
@@ -49,9 +48,8 @@
     z-index: 1;
 
     .about-photo {
-      width: 100%;
-      height: auto;
-      max-height: 1100px;
+      width: auto;
+      height: 1100px;
     }
   }
 
