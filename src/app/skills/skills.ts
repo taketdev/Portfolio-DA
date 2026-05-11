@@ -15,6 +15,8 @@ export class Skills implements AfterViewInit {
   private scrollService = inject(ScrollService);
   private platformId = inject(PLATFORM_ID);
 
+  isOverlayActive = false;
+
   skills = [
     { name: 'Angular', icon: 'Angular.svg' },
     { name: 'TypeScript', icon: 'TS.svg' },
@@ -44,5 +46,9 @@ export class Skills implements AfterViewInit {
 
       observer.observe(this.elementRef.nativeElement);
     }
+  }
+
+  toggleOverlay() {
+    this.isOverlayActive = !this.isOverlayActive;
   }
 }

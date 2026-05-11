@@ -1,6 +1,7 @@
 .skills {
   width: 100%;
   min-height: 100vh;
+  max-height: 100vh;
   background-color: #1d1d1d;
   font-family: 'Quicksand', sans-serif;
   display: flex;
@@ -12,17 +13,31 @@
   .skills-container {
     width: 100%;
     max-width: 1920px;
-    padding: 160px 140px;
+    padding: 120px 140px;
     flex: 1;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
+
+    @media (max-width: 1190px) {
+      padding: 100px 80px;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 80px 40px;
+      gap: 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 40px 24px;
+    }
   }
 
   .skills-content-top {
     width: 100%;
-    margin-bottom: 60px;
 
     .header-section {
       max-width: 902px;
@@ -33,18 +48,37 @@
         font-weight: 700;
         color: #f8f7e5;
         line-height: 1;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
+
+        @media (max-width: 960px) {
+          font-size: 60px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 45px;
+          margin-bottom: 16px;
+          margin-top: 100px;
+        }
       }
 
       .description-box {
         background-color: #679aac;
-        padding: 40px;
+        padding: 30px 40px;
         font-weight: 400;
         color: #f8f7e5;
         font-size: 18px;
         line-height: 1.6;
         border-radius: 4px;
         max-width: 700px;
+
+        @media (max-width: 960px) {
+          padding: 20px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 16px;
+          padding: 16px;
+        }
       }
     }
   }
@@ -53,22 +87,49 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    margin-top: auto;
+    align-items: center;
+    flex: 1;
+    min-height: 0;
+
+    @media (max-width: 1190px) {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+
+    @media (max-height: 700px) {
+      gap: 20px;
+    }
   }
 
   .decor-wrapper {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+
+    @media (max-width: 1190px) {
+      width: 100px;
+      height: 100px;
+      align-self: flex-start;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: -10px;
+    }
 
     .capa-circle {
       width: 150px;
       height: 150px;
       animation: rotate 30s linear infinite;
+
+      @media (max-width: 1190px) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     .emoji-wrapper {
@@ -79,6 +140,11 @@
       justify-content: center;
       align-items: center;
       z-index: 2;
+      cursor: pointer;
+
+      @media (max-width: 1190px) {
+        width: 35px;
+      }
 
       &:hover {
         .info-overlay {
@@ -90,15 +156,13 @@
         width: 100%;
         height: auto;
         animation: float 2s ease-in-out infinite;
-        cursor: pointer;
       }
 
       .info-overlay {
         position: absolute;
         bottom: 0;
-        left: calc(100% + 200px);
+        left: calc(100% + 100px);
         width: 360px;
-        height: 324px;
         background-color: #f9af42;
         border: 1px solid #ffffff;
         border-radius: 4px;
@@ -108,9 +172,34 @@
         align-items: center;
         justify-content: center;
         z-index: 10;
-        transform: translateY(800px);
+        transform: translateY(820px);
         transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         pointer-events: none;
+
+        @media (max-width: 1190px) {
+          left: 50%;
+          bottom: 120%;
+          transform: translate(-50%, 1000px);
+          
+          &:hover, .emoji-wrapper:hover & {
+             transform: translate(-50%, 0);
+          }
+        }
+
+        @media (max-width: 768px) {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          bottom: auto;
+          transform: translate(-50%, 200%) !important;
+          width: 90%;
+          max-width: 360px;
+          pointer-events: auto;
+          
+          &.active {
+            transform: translate(-50%, -50%) !important;
+          }
+        }
 
         .overlay-title {
           font-size: 24px;
@@ -160,16 +249,30 @@
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 64px;
+    gap: 48px 64px;
     justify-content: flex-end;
     max-width: 800px;
+    align-content: center;
+
+    @media (max-width: 1190px) {
+      justify-content: center;
+      gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 36px 20px;
+    }
+
+    @media (max-height: 800px) {
+      gap: 20px 40px;
+    }
   }
 
   .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 34px;
+    gap: 20px;
     width: 100px;
     transition: transform 0.3s ease;
 
@@ -177,7 +280,7 @@
       transform: translateY(-4px);
 
       .skill-icon {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
 
@@ -191,16 +294,21 @@
       border-radius: 16px;
       transition: all 0.3s ease;
 
+      @media (max-width: 480px) {
+        width: 40px;
+        height: 40px;
+      }
+
       .skill-icon {
-        width: 96px;
-        height: 123px;
+        width: 70px;
+        height: 70px;
         object-fit: contain;
         transition: transform 0.3s ease;
       }
     }
 
     .skill-name {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       color: #f8f7e5;
       text-align: center;
@@ -212,6 +320,10 @@
     right: 40px;
     top: 50%;
     transform: translateY(-50%);
+
+    @media (max-width: 1350px) {
+      display: none;
+    }
 
     img {
       height: 200px;

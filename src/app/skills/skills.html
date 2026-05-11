@@ -14,9 +14,9 @@
     <div class="skills-content-bottom">
       <div class="decor-wrapper">
         <img src="../../assets/skills/CapaCircle.svg" alt="" class="capa-circle">
-        <div class="emoji-wrapper">
+        <div class="emoji-wrapper" (click)="toggleOverlay()">
           <img src="../../assets/skills/LearningEmoji.svg" alt="" class="learning-emoji">
-          <div class="info-overlay">
+          <div class="info-overlay" [class.active]="isOverlayActive">
             <h3 class="overlay-title">{{ 'skills.missingTitle' | translate }}</h3>
             <p class="overlay-text">{{ 'skills.missingText' | translate }}</p>
             <div class="skills-icons">
