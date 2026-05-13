@@ -16,7 +16,7 @@
   background: transparent;
   z-index: 1000;
 
-  @media (max-width: 850px) {
+  @media (max-width: 1025px) {
     padding-left: 0;
     height: 50px;
     margin-top: 12px;
@@ -46,7 +46,7 @@
   
 
   &.is-scrolled {
-    @media (min-width: 1025px) {
+    @media (min-width: 791px) {
       .social-links {
         transform: translateY(-100px);
         opacity: 0;
