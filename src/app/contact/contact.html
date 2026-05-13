@@ -76,18 +76,18 @@
               {{ 'contact.privacy3' | translate }}
             </span>
           </div>
-          @if (submitted && !checked) {
+          @if (submitted && !checked && !success) {
             <span class="checkbox-error">
               {{ 'contact.privacyError' | translate }}
             </span>
           }
+          @if (success) {
+            <span class="checkbox-success">
+              {{ 'contact.success' | translate }}
+            </span>
+          }
         </div>
 
-        @if (success) {
-          <div class="form-status form-success">
-            {{ 'contact.success' | translate }}
-          </div>
-        }
         @if (errorMessage) {
           <div class="form-status form-error">
             {{ errorMessage }}
