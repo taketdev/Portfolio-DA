@@ -66,6 +66,10 @@
       margin-bottom: 20px;
     }
 
+    @media (max-width: 320px) {
+      font-size: 36px;
+    }
+
     @media (min-width: 2561px) {
       font-size: 112px;
     }
@@ -120,6 +124,10 @@
         height: 350px;
       }
 
+      @media (max-width: 320px) {
+        height: 290px;
+      }
+
       @media (min-width: 2561px) {
         height: 1000px;
       }
@@ -154,6 +162,11 @@
       width: 95%;
     }
 
+    @media (max-width: 320px) {
+      padding: 24px 16px;
+      margin-top: -60px;
+    }
+
     .about-description {
       font-size: 18px;
       line-height: 1.6;
@@ -166,6 +179,10 @@
 
       @media (max-width: 440px) {
         font-size: 15px;
+      }
+
+      @media (max-width: 320px) {
+        font-size: 14px;
       }
 
       p {
