@@ -93,7 +93,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     flex: 1;
 
     @media (max-width: 1190px) {
