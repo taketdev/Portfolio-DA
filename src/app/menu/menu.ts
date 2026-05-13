@@ -29,19 +29,19 @@ export class Menu {
     this.closeMenu();
     const main = document.querySelector('main');
     if (main) {
-      main.scrollTo({
-        top: index * main.clientHeight,
-        behavior: 'smooth'
-      });
+      const section = main.children[index] as HTMLElement;
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     } else {
       this.router.navigateByUrl('/').then(() => {
         requestAnimationFrame(() => {
           const el = document.querySelector('main');
           if (el) {
-            el.scrollTo({
-              top: index * el.clientHeight,
-              behavior: 'smooth'
-            });
+            const section = el.children[index] as HTMLElement;
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
           }
         });
       });
