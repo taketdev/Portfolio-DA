@@ -1,4 +1,5 @@
 <section class="my-work" id="my-work">
+  <div class="my-work-container-topper">
   <div class="my-work-container">
     <div class="section-header">
       <h2 class="section-title">{{ 'work.title' | translate }}</h2>
@@ -80,11 +81,13 @@
           </div>
         </div>
 
+
         <div class="project-nav">
           <button class="nav-btn prev-btn" (click)="prevProject()"><< {{ 'work.prev' | translate }}</button>
           <button class="nav-btn next-btn" (click)="nextProject()">{{ 'work.next' | translate }} >></button>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>

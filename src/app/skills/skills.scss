@@ -34,6 +34,10 @@
     @media (max-width: 480px) {
       padding: 40px 24px;
     }
+
+    @media (max-height: 375px) {
+      padding: 0px 24px;
+    }
   }
 
   .skills-content-top {
@@ -57,7 +61,11 @@
         @media (max-width: 480px) {
           font-size: 45px;
           margin-bottom: 16px;
-          margin-top: 100px;
+          margin-top: 10px;
+        }
+        
+        @media (max-height: 375px) {
+          margin-top: 10px;
         }
       }
 
@@ -78,6 +86,11 @@
         @media (max-width: 480px) {
           font-size: 16px;
           padding: 16px;
+        }
+
+        @media (max-height: 375px) {
+          padding: 10px;
+          font-size: 14px;
         }
       }
     }
@@ -129,6 +142,11 @@
       @media (max-width: 1190px) {
         width: 100px;
         height: 100px;
+      }
+
+      @media (max-width: 375px) {
+        width: 80px;
+        height: 80px;
       }
     }
 
@@ -276,6 +294,11 @@
     width: 100px;
     transition: transform 0.3s ease;
 
+    @media (max-width: 375px) {
+      width: 50px;
+      gap: 5px;
+    }
+
     &:hover {
       transform: translateY(-4px);
 
@@ -304,6 +327,11 @@
         height: 70px;
         object-fit: contain;
         transition: transform 0.3s ease;
+
+        @media (max-width: 375px) {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
 
@@ -312,6 +340,10 @@
       font-weight: 500;
       color: #f8f7e5;
       text-align: center;
+
+      @media (max-width: 375px) {
+        font-size: 16px;
+      }
     }
   }
 

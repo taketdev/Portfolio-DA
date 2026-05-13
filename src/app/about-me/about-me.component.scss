@@ -56,6 +56,10 @@
     @media (max-width: 623px) {
       font-size: 60px;
     }
+
+    @media (max-width: 375px) {
+      margin-bottom: -21px;
+    }
   }
 
   .about-content {
@@ -149,6 +153,10 @@
       margin-left: -150px;
     }
 
+    @media (max-width: 375px) {
+      margin-bottom: -140px;
+    }
+
     .about-actions {
       display: flex;
       align-items: center;
@@ -173,6 +181,10 @@
         height: auto;
         animation: float 4s ease-in-out infinite;
         cursor: pointer;
+
+        @media (max-width: 375px) {
+          width: 32px;
+        }
       }
 
       .info-overlay {
@@ -285,6 +297,10 @@
 
       @media (max-width: 530px) {
         font-size: 14px;
+      }
+
+      @media (max-width: 375px) {
+        padding: 6px 32px;
       }
 
       &:hover {
