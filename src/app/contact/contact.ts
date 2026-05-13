@@ -26,22 +26,32 @@ export class Contact implements AfterViewInit {
   message = '';
   submitting = false;
   success = false;
+  submitted = false;
   errorMessage: string | null = null;
 
   toggleCheck() {
     this.checked = !this.checked;
   }
 
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
   async onSubmit() {
+    this.submitted = true;
+    
+    if (!this.isValidEmail(this.email) && this.email !== '') {
+      this.email = '';
+    }
+    
+    if (!this.name || !this.email || !this.isValidEmail(this.email) || !this.message || !this.checked) {
+      return;
+    }
+
     this.submitting = true;
     this.success = false;
     this.errorMessage = null;
-
-    if (!this.checked) {
-      this.errorMessage = 'Please accept the privacy policy.';
-      this.submitting = false;
-      return;
-    }
 
     try {
       // Der Pfad ist relativ zum Projekt-Root über den Proxy

@@ -160,7 +160,7 @@
         border: none;
         border-bottom: 1.5px solid #F9AF42;
         color: #F8F7E5;
-        font-size: 16px;
+        font-size: 15px;
         font-family: inherit;
         outline: none;
         transition: border-color 0.3s ease;
@@ -168,6 +168,11 @@
         &::placeholder {
           color: #F8F7E5;
           opacity: 0.6;
+        }
+
+        &.error-placeholder::placeholder {
+          color: #E61C40;
+          opacity: 1;
         }
 
         &:focus {
@@ -181,39 +186,54 @@
       }
     }
 
-    .form-checkbox {
+    .form-checkbox-container {
       display: flex;
-      align-items: flex-start;
-      gap: 12px;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
 
-      .checkbox-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        margin-top: 2px;
-        flex-shrink: 0;
+      .form-checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
 
-        .checkbox-icon {
-          width: 20px;
-          height: 20px;
-          display: block;
+        .checkbox-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+          margin-top: 2px;
+          flex-shrink: 0;
+
+          .checkbox-icon {
+            width: 20px;
+            height: 20px;
+            display: block;
+          }
+        }
+
+        .checkbox-label {
+          font-size: 14px;
+          line-height: 1.5;
+          color: #F8F7E5;
+
+          .privacy-link {
+            color: #FF834F;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
 
-      .checkbox-label {
+      .checkbox-error {
+        color: #E61C40 !important;
         font-size: 14px;
-        line-height: 1.5;
-        color: #F8F7E5;
-
-        .privacy-link {
-          color: #FF834F;
-          text-decoration: none;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+        font-weight: 500;
+        margin-left: 32px;
+        display: block;
       }
     }
 

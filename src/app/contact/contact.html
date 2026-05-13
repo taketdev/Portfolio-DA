@@ -19,8 +19,9 @@
               type="text"
               id="name"
               name="name"
-              [placeholder]="'contact.namePlaceholder' | translate"
+              [placeholder]="(submitted && !name) ? ('contact.nameError' | translate) : ('contact.namePlaceholder' | translate)"
               class="form-input"
+              [class.error-placeholder]="submitted && !name"
               [(ngModel)]="name"
               required
             />
@@ -32,8 +33,9 @@
               type="email"
               id="email"
               name="email"
-              [placeholder]="'contact.emailPlaceholder' | translate"
+              [placeholder]="submitted ? (!email ? ('contact.emailError' | translate) : (!isValidEmail(email) ? ('contact.emailInvalidError' | translate) : ('contact.emailPlaceholder' | translate))) : ('contact.emailPlaceholder' | translate)"
               class="form-input"
+              [class.error-placeholder]="submitted && (!email || !isValidEmail(email))"
               [(ngModel)]="email"
               required
             />
@@ -45,32 +47,40 @@
           <textarea
             id="message"
             name="message"
-            [placeholder]="'contact.messagePlaceholder' | translate"
+            [placeholder]="(submitted && !message) ? ('contact.messageError' | translate) : ('contact.messagePlaceholder' | translate)"
             class="form-input form-textarea longform"
+            [class.error-placeholder]="submitted && !message"
             rows="4"
             [(ngModel)]="message"
             required
           ></textarea>
         </div>
 
-        <div class="form-checkbox">
-          <button
-            type="button"
-            class="checkbox-btn"
-            (click)="toggleCheck()"
-            [attr.aria-checked]="checked"
-          >
-            <img
-              [src]="checked ? '../../assets/contactAndFooter/checkbox Checked.svg' : '../../assets/contactAndFooter/checkbox.svg'"
-              alt=""
-              class="checkbox-icon"
-            />
-          </button>
-          <span class="checkbox-label">
-            {{ 'contact.privacy1' | translate }}
-            <a href="#" class="privacy-link">{{ 'contact.privacy2' | translate }}</a>
-            {{ 'contact.privacy3' | translate }}
-          </span>
+        <div class="form-checkbox-container">
+          <div class="form-checkbox">
+            <button
+              type="button"
+              class="checkbox-btn"
+              (click)="toggleCheck()"
+              [attr.aria-checked]="checked"
+            >
+              <img
+                [src]="checked ? '../../assets/contactAndFooter/checkbox Checked.svg' : '../../assets/contactAndFooter/checkbox.svg'"
+                alt=""
+                class="checkbox-icon"
+              />
+            </button>
+            <span class="checkbox-label">
+              {{ 'contact.privacy1' | translate }}
+              <a href="#" class="privacy-link">{{ 'contact.privacy2' | translate }}</a>
+              {{ 'contact.privacy3' | translate }}
+            </span>
+          </div>
+          @if (submitted && !checked) {
+            <span class="checkbox-error">
+              {{ 'contact.privacyError' | translate }}
+            </span>
+          }
         </div>
 
         @if (success) {
@@ -88,7 +98,7 @@
           <button
             type="submit"
             class="submit-btn"
-            [disabled]="!checked || submitting">
+            [disabled]="submitting || !checked">
             {{ submitting ? ('contact.sending' | translate) : ('contact.submit' | translate) }}
           </button>
         </div>
