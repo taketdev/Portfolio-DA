@@ -16,9 +16,15 @@
   background: transparent;
   z-index: 1000;
 
+  @media (max-width: 850px) {
+    padding-left: 0;
+    height: 50px;
+    margin-top: 12px;
+  }
+
   .header-container {
     width: 100%;
-    max-width: 1800px;
+    max-width: 1920px;
     padding: 0 140px;
     display: flex;
     justify-content: space-between;
@@ -135,6 +141,10 @@
       font-size: 42px;
       font-weight: 600;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+      @media (max-width: 850px) {
+        font-size: 32px;
+      }
     }
   }
 
