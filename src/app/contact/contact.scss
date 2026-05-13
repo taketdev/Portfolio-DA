@@ -1,7 +1,6 @@
 .contact {
   width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
   background-color: #1D1D1D;
   font-family: 'Quicksand', sans-serif;
   display: flex;
@@ -20,12 +19,15 @@
     flex-direction: column;
 
     @media (max-width: 1200px) {
-      max-width: 1000px;
+      padding: 80px 60px;
     }
 
-    @media (max-width: 1000px) {
-      max-width: 700px;
-      padding: 100px 100px;
+    @media (max-width: 850px) {
+      padding: 60px 32px;
+    }
+
+    @media (max-width: 440px) {
+      padding: 40px 20px;
     }
   }
 
@@ -38,7 +40,7 @@
     @media (max-width: 1200px) {
       flex-direction: column;
       align-items: center;
-      max-width: 1000px;
+      gap: 40px;
     }
   }
 
@@ -47,9 +49,8 @@
     max-width: 800px;
 
     @media (max-width: 1200px) {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      text-align: center;
+      max-width: 100%;
     }
 
     .contact-heading {
@@ -60,13 +61,17 @@
       line-height: 1.1;
       margin-bottom: 40px;
 
-      @media (max-width: 1000px) {
-        font-size: 75px;
-        margin-bottom: 20px;
+      @media (max-width: 1550px) {
+        font-size: 80px;
       }
-
-      @media (max-width: 420px) {
-        font-size: 65px;
+      @media (max-width: 850px) {
+        font-size: 60px;
+      }
+      @media (max-width: 440px) {
+        font-size: 50px;
+      }
+      @media (max-width: 375px) {
+        font-size: 45px;
       }
     }
 
@@ -74,12 +79,15 @@
       font-size: 32px;
       line-height: 1.6;
       color: #FF834F;
+      margin-bottom: 20px;
 
-      @media (max-width: 1000px) {
-        font-size: 26px;
+      @media (max-width: 850px) {
+        font-size: 24px;
+      }
+      @media (max-width: 440px) {
+        font-size: 20px;
       }
     }
-  }
 
     .contact-text {
       font-size: 20px;
@@ -87,52 +95,40 @@
       line-height: 1.6;
       color: #F8F7E5;
 
-      @media (max-width: 1000px) {
+      @media (max-width: 850px) {
+        font-size: 18px;
+      }
+      @media (max-width: 440px) {
         font-size: 16px;
       }
     }
+  }
 
   .contact-form {
     flex: 1;
+    width: 100%;
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
     align-self: flex-end;
-    margin-bottom: 250px;
+    gap: 24px;
+    margin-bottom: 200px;
 
     @media (max-width: 1200px) {
-      align-self: center;
-      justify-content: center;
+      margin-bottom: 250px;
     }
 
-    @media (max-width: 1000px) {
-      margin-bottom: 350px;
+    @media (max-width: 850px) {
+      margin-bottom: 300px;
     }
 
     .form-row {
       display: flex;
       gap: 24px;
 
-      @media (max-width: 1200px) {
-        width: 800px;
-      }
-
-      @media (max-width: 1000px) {
-        width: 500px;
-      }
-
-      @media (max-width: 520px) {
-        width: 400px;
-      }
-
-      @media (max-width: 420px) {
-        width: 350px;
-        gap: 12px;
-      }
-
-      .form-group {
-        flex: 1;
+      @media (max-width: 850px) {
+        flex-direction: column;
+        gap: 24px;
       }
     }
 
@@ -143,6 +139,10 @@
         font-weight: 600;
         color: #F8F7E5;
         margin-bottom: 8px;
+
+        @media (max-width: 440px) {
+          font-size: 20px;
+        }
       }
 
       .form-input {
@@ -168,7 +168,7 @@
 
         &.form-textarea {
           resize: vertical;
-          max-height: 51px;
+          min-height: 51px;
         }
       }
     }
@@ -256,21 +256,6 @@
         &:not(:disabled):hover {
           background-color: #F8F7E5;
           color: #1D1D1D;
-
-          .submit-arrow img {
-            filter: invert(1);
-          }
-        }
-
-        .submit-arrow {
-          display: flex;
-          align-items: center;
-
-          img {
-            width: 20px;
-            height: 32px;
-            transition: filter 0.3s ease;
-          }
         }
       }
     }
@@ -288,9 +273,16 @@
     justify-content: space-between;
     padding: 0 100px;
 
-    @media (max-width: 1030px) {
-      flex-direction: column-reverse;
+    @media (max-width: 1200px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: 850px) {
+      flex-direction: column;
       align-items: center;
+      gap: 32px;
+      padding: 0 32px 40px 32px;
+      position: absolute;
     }
 
     .contact-circles {
@@ -298,6 +290,11 @@
       display: flex;
       align-items: flex-end;
       order: 1;
+
+      @media (max-width: 850px) {
+        order: 3;
+        justify-content: center;
+      }
 
       .contact-circle {
         flex-shrink: 0;
@@ -308,8 +305,8 @@
         z-index: 1;
         animation: spin-ccw 8s linear infinite;
 
-        @media (max-width: 1030px) {
-          width: 100px;
+        @media (max-width: 850px) {
+          width: 120px;
         }
       }
 
@@ -318,8 +315,9 @@
         z-index: 2;
         animation: spin-cw 8s linear infinite;
 
-        @media (max-width: 1030px) {
-          width: 150px;
+        @media (max-width: 850px) {
+          width: 180px;
+          margin-left: -45px;
         }
       }
     }
@@ -333,9 +331,9 @@
       color: #F8F7E5;
       padding-bottom: 52px;
 
-      @media (max-width: 1030px) {
-        order: 3;
-        padding-bottom: 24px;
+      @media (max-width: 850px) {
+        order: 1;
+        padding-bottom: 0;
       }
     }
 
@@ -348,10 +346,12 @@
       order: 3;
       padding-bottom: 52px;
 
-      @media (max-width: 1030px) {
+      @media (max-width: 850px) {
         order: 2;
         justify-content: center;
-        padding-bottom: 24px;
+        padding-bottom: 0;
+        flex-wrap: wrap;
+        gap: 20px;
       }
 
       .footer-link {
@@ -369,11 +369,15 @@
   }
 
   @keyframes spin-cw {
-    to { transform: rotate(360deg); }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes spin-ccw {
-    to { transform: rotate(-360deg); }
+    to {
+      transform: rotate(-360deg);
+    }
   }
 
   .scroll-indicator {
@@ -384,6 +388,10 @@
 
     img {
       height: 168px;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
     }
   }
 }
