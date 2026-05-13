@@ -7,7 +7,7 @@ export class ScrollService {
   isHeroVisible = signal(true);
   isDarkHeader = signal(false);
   isMenuOpen = signal(false);
-  currentPage = signal<'home' | 'legal-notice'>('home');
+  currentPage = signal<'home' | 'legal-notice' | 'privacy-policy'>('home');
 
   toggleMenu() {
     this.isMenuOpen.set(!this.isMenuOpen());

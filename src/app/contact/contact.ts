@@ -41,7 +41,7 @@ export class Contact implements AfterViewInit {
 
   async onSubmit() {
     this.submitted = true;
-    
+
     if (!this.isValidEmail(this.email) && this.email !== '') {
       this.email = '';
     }

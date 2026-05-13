@@ -1,7 +1,7 @@
 <header class="header" 
         [class.is-scrolled]="!scrollService.isHeroVisible()"
         [class.is-dark]="scrollService.isDarkHeader()"
-        [class.is-sticky]="scrollService.currentPage() === 'legal-notice'">
+        [class.is-sticky]="scrollService.currentPage() === 'legal-notice' || scrollService.currentPage() === 'privacy-policy'">
   <div class="header-container">
     <div class="social-links">
       <a [href]="socialLinks.github" target="_blank" rel="noopener noreferrer" class="social-link">
