@@ -1,10 +1,7 @@
 {
-  "/api/*": {
+  "/contactFormMail.php": {
     "target": "http://localhost:8000",
     "secure": false,
-    "changeOrigin": true,
-    "pathRewrite": {
-      "^/api": ""
-    }
+    "changeOrigin": true
   }
 }

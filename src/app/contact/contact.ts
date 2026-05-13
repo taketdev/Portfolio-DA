@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, inject, PLATFORM_ID, ChangeDetectorRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -19,6 +19,7 @@ export class Contact implements AfterViewInit {
   private scrollService = inject(ScrollService);
   private platformId = inject(PLATFORM_ID);
   private http = inject(HttpClient);
+  private cdr = inject(ChangeDetectorRef);
 
   checked = false;
   name = '';
@@ -56,7 +57,7 @@ export class Contact implements AfterViewInit {
     try {
       // Der Pfad ist relativ zum Projekt-Root über den Proxy
       const res: any = await lastValueFrom(
-        this.http.post('/api/src/app/contact/contactFormMail.php', {
+        this.http.post('/contactFormMail.php', {
           name: this.name,
           email: this.email,
           message: this.message,
@@ -65,6 +66,7 @@ export class Contact implements AfterViewInit {
 
       if (res.success) {
         this.success = true;
+        this.submitted = false;
         this.name = '';
         this.email = '';
         this.message = '';
@@ -76,6 +78,7 @@ export class Contact implements AfterViewInit {
       this.errorMessage = err.error?.error || 'Server not reachable.';
     } finally {
       this.submitting = false;
+      this.cdr.detectChanges();
     }
   }
 

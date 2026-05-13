@@ -12,7 +12,7 @@ header("Content-Type: application/json; charset=utf-8");
 // ------------------------------------------------------------
 
 // >>> DEINE EMAIL HIER EINTRAGEN <<<
-$siteEmail = "maxleyh17@proton.me";
+$siteEmail = "contact@max-leyh.de";
 
 switch ($_SERVER['REQUEST_METHOD']) {
 
