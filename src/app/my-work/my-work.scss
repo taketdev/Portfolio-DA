@@ -92,25 +92,28 @@
   .project-card-row {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 55px;
+    width: 100%;
 
     @media (max-width: 1360px) {
       flex-direction: column;
       gap: 33px;
-      width: 100%;
     }
 
     .project-image-area {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      flex-shrink: 0;
+
+      @media (max-width: 1360px) {
+        width: 100%;
+      }
 
       .image-bg {
-        width: 100%;
-        max-width: 588px;
-        height: auto;
-        aspect-ratio: 1 / 1;
+        width: 588px;
+        height: 588px;
         background-color: #F9AF42;
         border: 1px solid #1D1D1D;
         border-radius: 4px;
@@ -120,6 +123,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 1360px) {
+          width: 100%;
+          max-width: 588px;
+          height: auto;
+          aspect-ratio: 1 / 1;
+        }
 
         @media (max-width: 540px) {
           padding: 16px;
@@ -173,25 +183,26 @@
     }
 
     .project-content-column {
-      flex: 1;
+      flex-shrink: 0;
       display: flex;
       flex-direction: column;
-      width: 100%;
 
       @media (max-width: 1360px) {
+        width: 100%;
         max-width: 588px;
       }
 
       .project-content {
         background-color: #1D1D1D;
         padding: 60px;
-        width: 100%;
+        width: 688px;
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
 
-        @media (max-width: 850px) {
+        @media (max-width: 1360px) {
+          width: 100%;
           padding: 40px 32px;
         }
 
@@ -240,7 +251,12 @@
                 &:hover {
                   .info-overlay {
                     opacity: 1;
+                    visibility: visible;
                     transform: translateY(0);
+
+                    @media (max-width: 440px) {
+                      transform: translate(-50%, -50%) scale(1);
+                    }
                   }
                 }
 
@@ -257,32 +273,63 @@
                   }
                 }
 
-                  .info-overlay {
+                .info-overlay {
                   position: absolute;
-                  bottom: calc(100% + 8px);
+                  bottom: calc(100% + 15px);
                   right: 0;
-                  left: auto;
-                  width: 500px;
-                  transform: translateY(10px);
+                  width: 320px;
                   background-color: #679AAC;
-                  border: 1px solid #F8F7E5;
-                  border-radius: 4px;
-                  padding: 16px;
+                  border: 1.5px solid #F8F7E5;
+                  border-radius: 8px;
+                  padding: 16px 20px;
                   text-align: left;
                   opacity: 0;
-                  transition: opacity 0.3s ease, transform 0.3s ease;
+                  visibility: hidden;
+                  transform: translateY(10px);
+                  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                   pointer-events: none;
-                  z-index: 10;
+                  z-index: 100;
+                  box-shadow: 0 10px 25 rgba(0, 0, 0, 0.2);
 
                   @media (max-width: 850px) {
-                    width: calc(100vw - 64px);
-                    max-width: 400px;
+                    width: 280px;
+                  }
+
+                  @media (max-width: 440px) {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    right: auto;
+                    bottom: auto;
+                    width: calc(100vw - 40px);
+                    max-width: 320px;
+                    transform: translate(-50%, -50%) scale(0.9);
+                    text-align: center;
                   }
 
                   .overlay-text {
-                    font-size: 18px;
-                    font-weight: 200;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    font-weight: 500;
                     color: #F8F7E5;
+                    display: block;
+                  }
+
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -8px;
+                    right: 12px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: #679AAC;
+                    border-right: 1.5px solid #F8F7E5;
+                    border-bottom: 1.5px solid #F8F7E5;
+                    transform: rotate(45deg);
+
+                    @media (max-width: 440px) {
+                      display: none;
+                    }
                   }
                 }
               }
