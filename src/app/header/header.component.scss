@@ -19,7 +19,7 @@
   @media (max-width: 1025px) {
     padding-left: 0;
     height: 50px;
-    margin-top: 12px;
+    margin-top: 0px;
   }
 
   .header-container {
@@ -133,7 +133,20 @@
 
     @media (max-width: 790px) {
       position : unset;
-      margin-left: 74px;
+      margin-left: 41px;
+    }
+
+    .logo-svg {
+      width: 45px;
+      height: 47px;
+
+    @media (max-width: 790px) {
+      width: 32px;
+    }
+
+    @media (max-width: 440px) {
+      width: 26px;
+    }
     }
 
     .logo-icon {
@@ -148,7 +161,7 @@
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
 
       @media (max-width: 850px) {
-        font-size: 32px;
+        font-size: 16px;
       }
     }
   }
@@ -179,6 +192,11 @@
           height: 32px;
           width: 32px;
           display: block;
+
+          @media (max-width: 750px) {
+            height: 24px;
+            width: 24px;
+          }
         }
 
         .icon-hover {
@@ -209,6 +227,14 @@
         width: auto;
         display: block;
       }
+
+    .icon-default{
+      width: 32px;
+
+      @media (max-width: 750px) {
+        width: 24px;
+      }
+    }
 
       .icon-hover {
         display: none;
