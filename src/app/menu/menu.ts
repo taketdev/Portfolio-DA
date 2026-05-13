@@ -15,6 +15,12 @@ export class Menu {
   public scrollService = inject(ScrollService);
   private router = inject(Router);
 
+  socialLinks = {
+    github: 'https://github.com/taketdev',
+    linkedin: 'https://www.linkedin.com/in/max-leyh-a52671362/',
+    email: 'mailto:maxleyh17@proton.me'
+  };
+
   closeMenu() {
     this.scrollService.isMenuOpen.set(false);
   }

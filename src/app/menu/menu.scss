@@ -29,6 +29,11 @@
     right: 32px;
     top: 88px;
     transform: translateX(calc(100% + 32px));
+    overflow: visible;
+  }
+
+  @media (max-width: 790px) {
+    height: 240px;
   }
 
   @media (max-width: 440px) {
@@ -125,6 +130,28 @@
           transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
           white-space: nowrap;
           cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .menu-social {
+    display: none;
+
+    @media (max-width: 790px) {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: auto;
+      padding-top: 12px;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 28px;
+          width: auto;
         }
       }
     }
