@@ -28,6 +28,26 @@
     "heading12": "12. Automatisierte Entscheidungsfindung",
     "text12": "Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling."
   },
+  "legal": {
+    "title": "Impressum",
+    "imprint": "Angaben gem\u00e4\u00df \u00a7 5 TMG",
+    "address": "[Liste der Studentennamen]<br>[Adresse des JOIN-Betreibers - z.B. einer der Studenten]<br>[Postleitzahl und Stadt]",
+    "board": "Vorstand",
+    "boardEmail": "E-Mail: [E-Mail]",
+    "terms": "Akzeptanz der Bedingungen",
+    "termsText": "Durch die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen an. Wir, die aufgef\u00fchrten Studenten, k\u00f6nnen die Bedingungen jederzeit ohne vorherige Ank\u00fcndigung aktualisieren oder \u00e4ndern.",
+    "scope": "Umfang und Eigentumsverh\u00e4ltnisse des Produkts",
+    "scopeText1": "Portfolio wurde als Teil eines Studentengruppenprojekts in einem Webentwicklungs-Bootcamp bei der Developer Akademie GmbH entwickelt. Es dient Bildungszwecken und ist nicht f\u00fcr umfangreiche pers\u00f6nliche oder gesch\u00e4ftliche Nutzung vorgesehen. Daher k\u00f6nnen wir keine dauerhafte Verf\u00fcgbarkeit, Zuverl\u00e4ssigkeit, Richtigkeit oder sonstige Qualit\u00e4tsaspekte dieses Produkts garantieren.",
+    "scopeText2": "Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Jegliche unbefugte Nutzung, Vervielf\u00e4ltigung, Modifikation, Verbreitung oder Nachahmung des Designs ist strengstens untersagt.",
+    "proprietary": "Eigentumsrechte",
+    "proprietaryText": "Abgesehen von dem Design, das der Developer Akademie GmbH geh\u00f6rt, behalten wir, die aufgef\u00fchrten Studenten, alle Eigentumsrechte an Portfolio, einschlie\u00dflich aller zugeh\u00f6rigen urheberrechtlich gesch\u00fctzten Materialien, Marken und sonstigen Schutzrechte.",
+    "use": "Nutzung des Produkts",
+    "useText": "Portfolio ist ausschlie\u00dflich f\u00fcr rechtm\u00e4\u00dfige Zwecke und in \u00dcbereinstimmung mit allen geltenden Gesetzen und Vorschriften zu verwenden. Jegliche Nutzung von Portfolio f\u00fcr illegale Aktivit\u00e4ten oder zur Bel\u00e4stigung, Sch\u00e4digung, Bedrohung oder Einsch\u00fcchterung einer anderen Person ist strengstens untersagt.",
+    "disclaimer": "Gew\u00e4hrleistungsausschluss und Haftungsbeschr\u00e4nkung",
+    "disclaimerText": "Portfolio wird \u201ewie besehen\u201c ohne jegliche Gew\u00e4hrleistung zur Verf\u00fcgung gestellt. In keinem Fall haften wir, die aufgef\u00fchrten Studenten, oder die Developer Akademie f\u00fcr direkte, indirekte, zuf\u00e4llige, besondere, Folge- oder exemplarische Sch\u00e4den.",
+    "indemnity": "Freistellung",
+    "indemnityText": "Sie erkl\u00e4ren sich damit einverstanden, uns, die aufgef\u00fchrten Studenten, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Vertreter und Mitarbeiter von jeglichen Anspr\u00fcchen, Forderungen, Verlusten, Sch\u00e4den, Kosten oder Verbindlichkeiten freizustellen, die sich aus oder im Zusammenhang mit Ihrer Nutzung von Portfolio und/oder Ihrem Versto\u00df gegen dieses Impressum ergeben."
+  },
   "contact": {
     "impressum": "Impressum"
   }
