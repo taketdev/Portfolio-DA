@@ -24,12 +24,16 @@
     align-items: center;
     position: relative;
 
-    @media (max-width: 430px) {
-      padding: 0 134px;
+    @media (max-width: 1200px) {
+      padding: 0 60px;
     }
 
-    @media (max-width: 375px) {
-      padding: 0 105px;
+    @media (max-width: 850px) {
+      padding: 0 32px;
+    }
+
+    @media (max-width: 440px) {
+      padding: 0 20px;
     }
   }
   

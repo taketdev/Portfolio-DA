@@ -20,6 +20,22 @@
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 
+  @media (max-width: 1200px) {
+    right: 60px;
+    transform: translateX(calc(100% + 60px));
+  }
+
+  @media (max-width: 850px) {
+    right: 32px;
+    top: 88px;
+    transform: translateX(calc(100% + 32px));
+  }
+
+  @media (max-width: 440px) {
+    right: 20px;
+    transform: translateX(calc(100% + 20px));
+  }
+
   &.open {
     transform: translateX(0);
   }
