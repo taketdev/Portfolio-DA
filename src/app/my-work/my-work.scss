@@ -44,6 +44,11 @@
     @media (max-width: 440px) {
       padding: 40px 20px;
     }
+
+    @media (min-width: 2561px) {
+      max-width: 2560px;
+      padding: 120px 200px;
+    }
   }
 
   .section-header {
@@ -70,6 +75,10 @@
 
       @media (max-width: 670px) {
         font-size: 60px;
+      }
+
+      @media (min-width: 2561px) {
+        font-size: 92px;
       }
     }
 

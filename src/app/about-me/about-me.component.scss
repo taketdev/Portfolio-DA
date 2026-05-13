@@ -30,6 +30,11 @@
     @media (max-width: 440px) {
       padding: 60px 20px;
     }
+
+    @media (min-width: 2561px) {
+      max-width: 2560px;
+      padding: 120px 200px;
+    }
   }
 
   .about-heading {
@@ -60,6 +65,10 @@
     @media (max-width: 440px) {
       font-size: 45px;
       margin-bottom: 20px;
+    }
+
+    @media (min-width: 2561px) {
+      font-size: 112px;
     }
   }
 
@@ -110,6 +119,10 @@
 
       @media (max-width: 440px) {
         height: 350px;
+      }
+
+      @media (min-width: 2561px) {
+        height: 1000px;
       }
     }
   }

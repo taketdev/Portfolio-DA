@@ -41,6 +41,11 @@
     transform: translateX(calc(100% + 20px));
   }
 
+  @media (min-width: 2561px) {
+    right: calc(200px + max(0px, (100vw - 2560px) / 2));
+    transform: translateX(calc(100% + 200px + max(0px, (100vw - 2560px) / 2)));
+  }
+
   &.open {
     transform: translateX(0);
   }

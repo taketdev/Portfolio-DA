@@ -29,6 +29,11 @@
     @media (max-width: 440px) {
       padding: 40px 20px;
     }
+
+    @media (min-width: 2561px) {
+      max-width: 2560px;
+      padding: 120px 200px;
+    }
   }
 
   .contact-content {
@@ -73,6 +78,10 @@
       }
       @media (max-width: 375px) {
         font-size: 45px;
+      }
+
+      @media (min-width: 2561px) {
+        font-size: 112px;
       }
     }
 
@@ -322,6 +331,11 @@
       gap: 32px;
       padding: 0 32px 40px 32px;
       position: absolute;
+    }
+
+    @media (min-width: 2561px) {
+      max-width: 2560px;
+      padding: 0 200px;
     }
 
     .contact-circles {
