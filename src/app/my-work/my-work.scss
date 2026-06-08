@@ -25,7 +25,7 @@
   .my-work-container {
     width: 100%;
     max-width: 1920px;
-    padding: 120px 140px;
+    padding: clamp(40px, 6.25vw, 120px) clamp(20px, 7.292vw, 200px);
     flex: 1;
     position: relative;
     display: flex;
@@ -65,12 +65,12 @@
       max-width: 588px;
     }
 
-    .section-title {
-      font-size: 80px;
-      font-weight: 700;
-      font-family: 'Eczar', serif !important;
-      color: #1D1D1D;
-      line-height: 1;
+      .section-title {
+        font-size: clamp(60px, 4.167vw, 92px);
+        font-weight: 700;
+        font-family: 'Eczar', serif !important;
+        color: #1D1D1D;
+        line-height: 1;
 
       @media (max-width: 670px) {
         font-size: 60px;
@@ -85,7 +85,7 @@
       max-width: 600px;
       color: #1D1D1D;
       font-weight: 400;
-      font-size: 18px;
+      font-size: clamp(14px, 0.938vw, 18px);
       line-height: 1.6;
       margin-left: 40px;
 
@@ -103,7 +103,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 55px;
+    gap: clamp(20px, 2.865vw, 55px);
     width: 100%;
 
     @media (max-width: 1360px) {
@@ -122,12 +122,12 @@
       }
 
       .image-bg {
-        width: 588px;
-        height: 588px;
+        width: clamp(280px, 30.625vw, 588px);
+        height: clamp(280px, 30.625vw, 588px);
         background-color: #F9AF42;
         border: 1px solid #1D1D1D;
         border-radius: 4px;
-        padding: 24px;
+        padding: clamp(16px, 1.25vw, 24px);
         position: relative;
         display: flex;
         justify-content: center;
@@ -148,8 +148,8 @@
           position: absolute;
           bottom: 0;
           left: 0;
-          width: 180px;
-          height: 180px;
+          width: clamp(120px, 9.375vw, 180px);
+          height: clamp(120px, 9.375vw, 180px);
           pointer-events: none;
           z-index: 1;
 
@@ -203,8 +203,8 @@
 
       .project-content {
         background-color: #1D1D1D;
-        padding: 60px;
-        width: 688px;
+        padding: clamp(32px, 3.125vw, 60px);
+        width: clamp(300px, 35.833vw, 688px);
         height: auto;
         display: flex;
         flex-direction: column;
@@ -239,7 +239,7 @@
               }
 
               .project-title {
-                font-size: 48px;
+                font-size: clamp(30px, 2.5vw, 48px);
                 font-weight: 700;
                 color: #F8F7E5;
                 
@@ -351,7 +351,7 @@
             margin-bottom: 24px;
 
             .tech-item {
-              font-size: 17px;
+              font-size: clamp(14px, 0.885vw, 17px);
               color: #679AAC;
               font-weight: 500;
 
@@ -372,7 +372,7 @@
           }
 
           .project-description {
-            font-size: 18px;
+            font-size: clamp(14px, 0.938vw, 18px);
             line-height: 1.6;
             color: #F8F7E5;
             margin-bottom: 24px;
