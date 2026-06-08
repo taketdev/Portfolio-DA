@@ -11,7 +11,7 @@
   .contact-container {
     width: 100%;
     max-width: 1920px;
-    padding: 120px 140px;
+    padding: clamp(40px, 6.25vw, 120px) clamp(20px, 7.292vw, 200px);
     flex: 1;
     position: relative;
     display: flex;
@@ -37,7 +37,7 @@
 
   .contact-content {
     display: flex;
-    gap: 80px;
+    gap: clamp(40px, 4.167vw, 80px);
     align-items: flex-start;
     flex: 1;
 
@@ -58,7 +58,7 @@
     }
 
     .contact-heading {
-      font-size: 100px;
+      font-size: clamp(36px, 5.208vw, 112px);
       font-weight: 700;
       font-family: 'Eczar', serif !important;
       color: #F9AF42;
@@ -89,7 +89,7 @@
     }
 
     .contact-solve {
-      font-size: 32px;
+      font-size: clamp(18px, 1.667vw, 32px);
       line-height: 1.6;
       color: #FF834F;
       margin-bottom: 20px;
@@ -108,7 +108,7 @@
     }
 
     .contact-text {
-      font-size: 20px;
+      font-size: clamp(14px, 1.042vw, 20px);
       font-weight: 500;
       line-height: 1.6;
       color: #F8F7E5;
@@ -145,9 +145,9 @@
       margin-bottom: 300px;
     }
 
-    .form-row {
+      .form-row {
       display: flex;
-      gap: 24px;
+      gap: clamp(16px, 1.25vw, 24px);
       width: 100%;
 
       @media (max-width: 850px) {
@@ -163,7 +163,7 @@
     .form-group {
       .form-label {
         display: block;
-        font-size: 24px;
+        font-size: clamp(18px, 1.25vw, 24px);
         font-weight: 600;
         color: #F8F7E5;
         margin-bottom: 8px;
@@ -305,7 +305,7 @@
         border: 1.5px solid #F8F7E5;
         border-radius: 32px;
         color: #F8F7E5;
-        font-size: 18px;
+        font-size: clamp(14px, 0.938vw, 18px);
         font-weight: 600;
         font-family: inherit;
         cursor: pointer;
@@ -341,7 +341,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 0 clamp(32px, 5.208vw, 200px);
 
     @media (max-width: 1200px) {
       padding: 0 60px;
@@ -379,6 +379,7 @@
       .orange-circle {
         z-index: 1;
         animation: spin-ccw 8s linear infinite;
+        width: clamp(100px, 7.813vw, 150px);
 
         @media (max-width: 850px) {
           width: 120px;
@@ -386,9 +387,10 @@
       }
 
       .blue-circle {
-        margin-left: -65px;
+        margin-left: clamp(-65px, -3.385vw, -45px);
         z-index: 2;
         animation: spin-cw 8s linear infinite;
+        width: clamp(140px, 11.458vw, 220px);
 
         @media (max-width: 850px) {
           width: 180px;
@@ -401,7 +403,7 @@
       flex: 0 0 auto;
       text-align: center;
       order: 2;
-      font-size: 18px;
+      font-size: clamp(14px, 0.938vw, 18px);
       font-weight: 500;
       color: #F8F7E5;
       padding-bottom: 52px;
@@ -419,7 +421,7 @@
     .footer-links {
       flex: 1;
       display: flex;
-      gap: 32px;
+      gap: clamp(20px, 1.667vw, 32px);
       align-items: center;
       justify-content: flex-end;
       order: 3;
