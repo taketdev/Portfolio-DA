@@ -13,7 +13,7 @@
   .hero-container {
     width: 100%;
     max-width: 1920px;
-    padding: 0 150px;
+    padding: 0 clamp(20px, 7.812vw, 200px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -62,7 +62,7 @@
   .hero-text {
     align-self: center;
     margin-left: 50px;
-    padding-bottom: 250px;
+    padding-bottom: clamp(40px, 13.021vw, 300px);
     z-index: 5;
 
     @media (max-width: 1055px) {
@@ -90,7 +90,7 @@
       .greeting {
         color: #F8F7E5;
         font-weight: 100;
-        font-size: 56px;
+        font-size: clamp(28px, 2.917vw, 64px);
 
         @media (max-width: 1550px) {
           font-size: 44px;
@@ -113,7 +113,7 @@
       .name {
         font-family: 'Eczar', serif !important;
         color: #F8F7E5;
-        font-size: 112px;
+        font-size: clamp(48px, 5.833vw, 128px);
 
         @media (max-width: 1550px) {
           font-size: 80px;
@@ -138,7 +138,7 @@
     }
 
     .hero-subtitle {
-      font-size: 48px;
+      font-size: clamp(20px, 2.5vw, 56px);
       font-weight: 100;
       color: #F8F7E5;
       letter-spacing: 2px;
@@ -213,11 +213,11 @@
       left: 200px;
     }
 
-    .scroll-down-link {
+      .scroll-down-link {
       display: block;
       position: relative;
-      width: 144px;
-      height: 144px;
+      width: clamp(80px, 7.5vw, 160px);
+      height: clamp(80px, 7.5vw, 160px);
 
       @media (max-width: 440px) {
         width: 80px;
@@ -236,7 +236,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 41px;
+        width: clamp(20px, 2.135vw, 48px);
         height: auto;
         display: block;
 
@@ -280,7 +280,7 @@
       align-items: flex-end;
 
       .hero-circle {
-        width: 1000px;
+        width: clamp(300px, 52.083vw, 1100px);
         height: auto;
         animation: rotate 20s linear infinite;
         vertical-align: bottom;
@@ -321,7 +321,7 @@
 
     .hero-photo {
       width: auto;
-      height: 1000px;
+      height: clamp(300px, 52.083vw, 1100px);
       max-width: 100%;
       position: relative;
       z-index: 2;
