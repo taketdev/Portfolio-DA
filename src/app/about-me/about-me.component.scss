@@ -20,18 +20,6 @@
     flex-direction: column;
     justify-content: center;
 
-    @media (max-width: 1550px) {
-      padding: 100px 80px;
-    }
-
-    @media (max-width: 850px) {
-      padding: 80px 32px;
-    }
-
-    @media (max-width: 440px) {
-      padding: 60px 20px;
-    }
-
     @media (min-width: 2561px) {
       max-width: 2560px;
       padding: 120px 200px;
@@ -50,30 +38,9 @@
     position: relative;
     z-index: 5;
 
-    @media (max-width: 1550px) {
-      font-size: 80px;
-    }
-
     @media (max-width: 1100px) {
       text-align: left;
       margin-bottom: 40px;
-    }
-
-    @media (max-width: 850px) {
-      font-size: 60px;
-    }
-
-    @media (max-width: 440px) {
-      font-size: 45px;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 320px) {
-      font-size: 36px;
-    }
-
-    @media (min-width: 2561px) {
-      font-size: 112px;
     }
   }
 
@@ -109,29 +76,8 @@
       max-width: 100%;
       object-fit: contain;
 
-      @media (max-width: 1550px) {
-        height: 700px;
-      }
-
       @media (max-width: 1100px) {
-        height: 500px;
         max-width: 85%;
-      }
-
-      @media (max-width: 850px) {
-        height: 400px;
-      }
-
-      @media (max-width: 440px) {
-        height: 350px;
-      }
-
-      @media (max-width: 320px) {
-        height: 290px;
-      }
-
-      @media (min-width: 2561px) {
-        height: 1000px;
       }
     }
   }
@@ -146,26 +92,19 @@
     color: #f8f7e5;
     position: relative;
 
-    @media (max-width: 1550px) {
-      padding: 40px;
-    }
-
     @media (max-width: 1100px) {
       margin-left: auto;
       margin-top: -120px;
-      margin-bottom: 60px;
       width: 90%;
       max-width: 600px;
     }
 
     @media (max-width: 440px) {
-      padding: 32px 24px;
       margin-top: -80px;
       width: 95%;
     }
 
     @media (max-width: 320px) {
-      padding: 24px 16px;
       margin-top: -60px;
     }
 
@@ -174,18 +113,6 @@
       line-height: 1.6;
       margin-bottom: 32px;
       font-weight: 400;
-
-      @media (max-width: 850px) {
-        font-size: 16px;
-      }
-
-      @media (max-width: 440px) {
-        font-size: 15px;
-      }
-
-      @media (max-width: 320px) {
-        font-size: 14px;
-      }
 
       p {
         margin-bottom: 16px;
@@ -213,11 +140,6 @@
         font-weight: 600;
         transition: all 0.3s ease;
 
-        @media (max-width: 440px) {
-          width: 100%;
-          text-align: center;
-        }
-
         &:hover {
           background-color: #e67647;
           transform: translateY(-3px);
@@ -236,10 +158,6 @@
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
-
-            @media (max-width: 768px) {
-              transform: translate(-50%, -50%) scale(1);
-            }
           }
         }
 
